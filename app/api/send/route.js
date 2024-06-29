@@ -16,8 +16,8 @@ export async function POST(req, res) {
       react: (
         <>
           <h1>{subject}</h1>
-          <p>New message submitted from {email}:</p>
           <p>{message}</p>
+          <p>From: {email}</p>
         </>
       ),
     });
