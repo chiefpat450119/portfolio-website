@@ -46,9 +46,8 @@ const EmailSection = () => {
         <h5 className="text-xl font-bold text-white my-2">Let&apos;s Connect</h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
           {" "}
-          I&apos;m currently looking for new opportunities; my inbox is always open!
-          Whether you have a question or just want to say hi, I&apos;ll try my best
-          to get back to you!
+          I&apos;m always looking for new opportunities and people to collaborate with.
+          Whether you have questions or just want to discuss your favourite tennis player, don&apos;t hesitate to reach out!
         </p>
         <div className="socials flex flex-row gap-2">
           <Link href="https://www.github.com/chiefpat450119">
@@ -89,7 +88,7 @@ const EmailSection = () => {
             id="subject"
             required
             className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-            placeholder="Just saying hi!"
+            placeholder="I hate cilantro."
           />
         </div>
         <div className="mb-6">
@@ -104,14 +103,14 @@ const EmailSection = () => {
             id="message"
             required
             className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-            placeholder="Let's chat..."
+            placeholder="I actually really hate cilantro."
           />
         </div>
         <button
           type="submit"
           className="bg-gradient-to-br from-primary-500 to-secondary-500 hover:from-primary-700 hover:to-secondary-700 text-white font-medium py-2.5 px-5 rounded-lg w-full"
         >
-          Send Message
+          Send Message :D
         </button>
         {emailSubmitted && (
           <p className="text-green-400 text-sm mt-2">
