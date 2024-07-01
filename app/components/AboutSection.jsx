@@ -49,7 +49,7 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li>NwPlus HackCamp 2023 Winner &#40;$100 prize&#41;</li>
-        <li>Dean's Scholar @ UBC</li>
+        <li>Dean&apos;s Scholar @ UBC</li>
         <li>3x Best Overall Academic Achievement Award @ ACS International, Singapore</li>
       </ul>
     ),

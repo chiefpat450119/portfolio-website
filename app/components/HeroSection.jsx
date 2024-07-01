@@ -40,9 +40,8 @@ const HeroSection = () => {
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
             Second year computer science student at the University of British
             Columbia with an intense passion for learning and problem-solving.
-            Whether it's at a hackathon, in the gym, or on the tennis court, I'm
-            always looking for opportunites to hone my skills and grow as an
-            individual.
+            Whether it&apos;s at a hackathon, in the gym, or on the tennis court, I&apos;m
+            always looking for opportunites to hone my skills and expand my horizons.
           </p>
           <div>
             <Link
