@@ -4,6 +4,8 @@ import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
 
+// TODO: Update projects
+// TODO: Change the tabs to hackathons, school projects, etc.
 const projectsData = [
   {
     id: 1,

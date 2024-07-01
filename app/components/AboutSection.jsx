@@ -3,48 +3,61 @@ import React, { useState, useTransition } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
 
-
-// TODO: Move this to a separate file
+// TODO: Move this to a separate file, Not urgent.
+// TODO: Finish bio.
 const TAB_DATA = [
+  {
+    title: "Current Involvement",
+    id: "current",
+    content: (
+      <ul className="list-disc pl-2">
+        <li>2nd Year BSc. @ UBC</li>
+        <li>Tennis Instructor @ UBC Recreation</li>
+        <li>Tutor @ Math Tutor Network</li>
+        <li>GDSC UBC</li>
+      </ul>
+    ),
+  },
   {
     title: "Skills",
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
+        <li>Python</li>
         <li>JavaScript</li>
-        <li>React</li>
-        <li>Node.js</li>
-        <li>MongoDB</li>
+        <li>HTML/CSS</li>
+        <li>Next.js + React</li>
+        <li>Java</li>
+        <li>Jupyter</li>
+        <li>R</li>
       </ul>
-    )
+    ),
   },
   {
     title: "Experience",
     id: "experience",
     content: (
       <ul className="list-disc pl-2">
-        <li>Frontend Developer at Company A</li>
-        <li>Backend Developer at Company B</li>
-        <li>Full Stack Developer at Company C</li>
+        <li>Tennis Instructor @ UBC Recreation, Vancouver</li>
+        <li>Software Engineer Intern @ Project Flux, Singapore</li>
       </ul>
-    )
+    ),
   },
   {
-    title: "Certifications",
-    id: "certifications",
+    title: "Awards",
+    id: "awards",
     content: (
       <ul className="list-disc pl-2">
-        <li>JavaScript Certification</li>
-        <li>React Certification</li>
-        <li>Node.js Certification</li>
-        <li>MongoDB Certification</li>
+        <li>NwPlus HackCamp 2023 Winner &#40;$100 prize&#41;</li>
+        <li>Dean's Scholar @ UBC</li>
+        <li>3x Best Overall Academic Achievement Award @ ACS International, Singapore</li>
       </ul>
-    )
-  }
+    ),
+  },
 ];
 
 const AboutSection = () => {
-  const [tab, setTab] = useState("skills");
+  const [tab, setTab] = useState("current");
   const [isPending, startTransition] = useTransition();
 
   const handleTabChange = (id) => {
@@ -56,37 +69,38 @@ const AboutSection = () => {
   return (
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.png" width={500} height={500}  alt="about image"/>
+        <Image
+          src="/images/about-image.png"
+          width={500}
+          height={500}
+          alt="about image"
+        />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
+          <h2 className="text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-400">
+            About Patrick Zhou
+          </h2>
           <p className="text-base lg:text-lg">
-            I am a full stack developer with a passion for building web
-            applications. I have experience working with JavaScript, React,
-            Node.js, and MongoDB. I am always looking to learn new technologies
-            and improve my skills. I am currently looking for new opportunities
-            to work on exciting projects.
+            I am a lifelong learner with a passion for creating and for
+            problem-solving. This has driven me to apply the knowledge and skills I learn both in and out of the classroom towards
+            creating impactful solutions to challenges 
+            I wholeheartedly believe in an interdisciplinary approach to...
+            which is why I make a deliberate effort to incorporate what I learn across my various interests into my work.
+            My hobbies also provide the inspiration...
           </p>
           <div className="flex flex-row justify-start mt-8">
-            <TabButton
-              selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
-            >
-              Skills{" "}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("experience")}
-              active={tab === "experience"}
-            >
-              Experience{" "}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
-            >
-              Certifications{" "}
-            </TabButton>
+            {TAB_DATA.map((data) => (
+              <TabButton
+                key={data.id}
+                selectTab={() => handleTabChange(data.id)}
+                active={tab === data.id}
+              >
+                {data.title}
+              </TabButton>
+            ))}
           </div>
-          <div className="mt-8">{TAB_DATA.find((data) => data.id === tab).content}</div>
+          <div className="mt-8">
+            {TAB_DATA.find((data) => data.id === tab).content}
+          </div>
         </div>
       </div>
     </section>

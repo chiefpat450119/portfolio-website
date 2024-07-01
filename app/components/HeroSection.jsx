@@ -16,14 +16,13 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center sm:text-left justify-self-start"
         >
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-7xl lg:leading-normal font-extrabold">
+          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl lg:leading-normal font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
-              Hi, I&apos;m{" "}
+              Hi, I&apos;m Patrick,{" "}
             </span>
+            <br />
             <TypeAnimation
               sequence={[
-                "Patrick",
-                1000,
                 "a programmer",
                 1000,
                 "a scripter",
@@ -39,7 +38,11 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+            Second year computer science student at the University of British
+            Columbia with an intense passion for learning and problem-solving.
+            Whether it's at a hackathon, in the gym, or on the tennis court, I'm
+            always looking for opportunites to hone my skills and grow as an
+            individual.
           </p>
           <div>
             <Link
@@ -48,7 +51,12 @@ const HeroSection = () => {
             >
               Contact Me
             </Link>
-            <Link href="/" className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:from-primary-700 hover:to-secondary-700 text-white mt-3">
+            <Link
+              href="https://drive.google.com/file/d/1QSh3W1VdHr6d6ipmIWcFtrHGoN-qv5YW/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:from-primary-700 hover:to-secondary-700 text-white mt-3"
+            >
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
                 {" "}
                 Resume
