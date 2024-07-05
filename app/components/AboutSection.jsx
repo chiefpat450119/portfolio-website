@@ -90,8 +90,8 @@ const AboutSection = () => {
             interdisciplinary approach to problem-solving and in diverse
             environments, which is why I make a deliberate effort to incorporate
             experience across various interests into my work. <br />
-            I'm currently an instructor at the UBC Tennis Centre while pursuing
-            my degree and working on projects on the side. I'd love to chat
+            I&apos;m currently an instructor at the UBC Tennis Centre while pursuing
+            my degree and working on projects on the side. I&apos;d love to chat
             about tennis, tech, or anything in between!
           </p>
           <div className="flex flex-row justify-start mt-8">
