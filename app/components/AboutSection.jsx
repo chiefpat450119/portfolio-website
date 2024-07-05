@@ -50,7 +50,10 @@ const TAB_DATA = [
       <ul className="list-disc pl-2">
         <li>NwPlus HackCamp 2023 Winner &#40;$100 prize&#41;</li>
         <li>Dean&apos;s Scholar @ UBC</li>
-        <li>3x Best Overall Academic Achievement Award @ ACS International, Singapore</li>
+        <li>
+          3x Best Overall Academic Achievement Award @ ACS International,
+          Singapore
+        </li>
       </ul>
     ),
   },
@@ -81,11 +84,15 @@ const AboutSection = () => {
           </h2>
           <p className="text-base lg:text-lg">
             I am a lifelong learner with a passion for creating and for
-            problem-solving. This has driven me to apply the knowledge and skills I learn both in and out of the classroom towards
-            creating impactful solutions to challenges 
-            I wholeheartedly believe in an interdisciplinary approach to...
-            which is why I make a deliberate effort to incorporate what I learn across my various interests into my work.
-            My hobbies also provide the inspiration...
+            problem-solving, fueling my drive to apply my expertise towards
+            creating impactful solutions to pertinent challenges both in my own
+            life and in the communities I take part in. I thrive off an
+            interdisciplinary approach to problem-solving and in diverse
+            environments, which is why I make a deliberate effort to incorporate
+            experience across various interests into my work. <br />
+            I'm currently an instructor at the UBC Tennis Centre while pursuing
+            my degree and working on projects on the side. I'd love to chat
+            about tennis, tech, or anything in between!
           </p>
           <div className="flex flex-row justify-start mt-8">
             {TAB_DATA.map((data) => (

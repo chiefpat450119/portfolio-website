@@ -5,59 +5,62 @@ import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
 
 // TODO: Update projects
-// TODO: Change the tabs to hackathons, school projects, etc.
+// TODO: Update thumbnails
+// TODO: Update github 
+// TODO: Update preview (make video links)
+// TODO: Add tags to the project cards to display technologies and frameworks used.
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
+    title: "Ammonium Bot",
+    description: "Reddit bot that helps users with common grammatical and etymological mistakes.",
     image: "/images/projects/1.png",
-    tag: ["All", "Web"],
+    tag: ["All", "Community"],
     gitUrl: "/",
     previewUrl: "/",
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
+    title: "Fighting My Demons: HackCamp 2023 Winning Submission",
+    description: "An innovative game that stops users from snoozing their alarms in the morning.",
     image: "/images/projects/2.png",
-    tag: ["All", "Web"],
+    tag: ["All", "Hackathon"],
     gitUrl: "/",
     previewUrl: "/",
   },
   {
     id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
+    title: "Loopy",
+    description: "Maps API powered planner and rating system for Metro Vancouver transit routes.",
     image: "/images/projects/3.png",
-    tag: ["All", "Web"],
+    tag: ["All", "Hackathon", "Community"],
     gitUrl: "/",
     previewUrl: "/",
   },
   {
     id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
+    title: "Heart Disease Classifier",
+    description: "Data science analysis using KNN classification in R to predict the presence of heart disease.",
     image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
+    tag: ["All", "School"],
     gitUrl: "/",
     previewUrl: "/",
   },
   {
     id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
+    title: "Iron Insight",
+    description: "Java desktop application for tracking strength training progress.",
     image: "/images/projects/5.png",
-    tag: ["All", "Web"],
+    tag: ["All", "School"],
     gitUrl: "/",
     previewUrl: "/",
   },
   {
     id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
+    title: "Portfolio Tracker",
+    description: "Personal invesment tracker built with Python, Sheets API and GitHub Actions.",
     image: "/images/projects/6.png",
-    tag: ["All", "Web"],
+    tag: ["All", "Personal"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -94,13 +97,23 @@ const ProjectsSection = () => {
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Web"
-          isSelected={tag === "Web"}
+          name="Hackathon"
+          isSelected={tag === "Hackathon"}
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
+          name="Personal"
+          isSelected={tag === "Personal"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Community"
+          isSelected={tag === "Community"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="School"
+          isSelected={tag === "School"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">

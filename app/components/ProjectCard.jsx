@@ -2,6 +2,8 @@ import React from "react";
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 
+// TODO: Add tags to the project cards to display technologies and frameworks used.
+
 const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
   return (
     <div>
