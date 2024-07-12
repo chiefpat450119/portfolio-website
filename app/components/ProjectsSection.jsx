@@ -4,66 +4,75 @@ import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
 
-// TODO: Update projects
-// TODO: Update thumbnails
-// TODO: Update github 
+// TODO: Update projects and github repos (make public if possible)
 // TODO: Update preview (make video links)
 // TODO: Add tags to the project cards to display technologies and frameworks used.
+const ROOT_URL = "https://github.com/chiefpat450119/";
+
 const projectsData = [
   {
     id: 1,
     title: "Ammonium Bot",
     description: "Reddit bot that helps users with common grammatical and etymological mistakes.",
-    image: "/images/projects/1.png",
+    image: "/images/projects/ammoniumbot.png",
     tag: ["All", "Community"],
-    gitUrl: "/",
+    gitUrl: ROOT_URL + "AmmoniumBot",
     previewUrl: "/",
   },
   {
     id: 2,
     title: "Fighting My Demons: HackCamp 2023 Winning Submission",
     description: "An innovative game that stops users from snoozing their alarms in the morning.",
-    image: "/images/projects/2.png",
+    image: "/images/projects/fightingmydemons.png",
     tag: ["All", "Hackathon"],
-    gitUrl: "/",
+    gitUrl: ROOT_URL + "FightingMyDemons",
     previewUrl: "/",
   },
   {
     id: 3,
     title: "Loopy",
     description: "Maps API powered planner and rating system for Metro Vancouver transit routes.",
-    image: "/images/projects/3.png",
+    image: "/images/projects/loopy.png",
     tag: ["All", "Hackathon", "Community"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/Andrewyx/Loopy",
     previewUrl: "/",
   },
   {
     id: 4,
     title: "Heart Disease Classifier",
     description: "Data science analysis using KNN classification in R to predict the presence of heart disease.",
-    image: "/images/projects/4.png",
+    image: "/images/projects/heartdisease.png",
     tag: ["All", "School"],
-    gitUrl: "/",
+    gitUrl: ROOT_URL + "HeartDiseaseClassifier",
     previewUrl: "/",
   },
   {
     id: 5,
     title: "Iron Insight",
     description: "Java desktop application for tracking strength training progress.",
-    image: "/images/projects/5.png",
+    image: "/images/projects/ironinsight.png",
     tag: ["All", "School"],
-    gitUrl: "/",
+    gitUrl: ROOT_URL + "IronInsight",
     previewUrl: "/",
   },
   {
     id: 6,
     title: "Portfolio Tracker",
     description: "Personal invesment tracker built with Python, Sheets API and GitHub Actions.",
-    image: "/images/projects/6.png",
+    image: "/images/projects/portfolio.jpg",
     tag: ["All", "Personal"],
-    gitUrl: "/",
+    gitUrl: ROOT_URL + "PortfolioTracker",
     previewUrl: "/",
   },
+  {
+    id: 7,
+    title: "SLack Off",
+    description: "Lecture slide and audio summarizer to help you catch up on missed (or skipped) classes.",
+    image: "/images/projects/slackoff.jpg",
+    tag: ["All", "Hackathon"],
+    gitUrl: "https://github.com/Andrewyx/slack-off",
+    previewUrl: "/",
+  }
 ];
 
 const cardVariants = {

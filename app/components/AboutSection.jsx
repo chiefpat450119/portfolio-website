@@ -4,7 +4,6 @@ import Image from "next/image";
 import TabButton from "./TabButton";
 
 // TODO: Move this to a separate file, Not urgent.
-// TODO: Finish bio.
 const TAB_DATA = [
   {
     title: "Current Involvement",
