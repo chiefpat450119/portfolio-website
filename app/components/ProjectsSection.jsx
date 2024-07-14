@@ -7,6 +7,7 @@ import { motion, useInView } from "framer-motion";
 // TODO: Update projects and github repos (make public if possible)
 // TODO: Update preview (make video links)
 // TODO: Add tags to the project cards to display technologies and frameworks used.
+// TODO: CHnage favicon
 const ROOT_URL = "https://github.com/chiefpat450119/";
 
 const projectsData = [
@@ -18,6 +19,7 @@ const projectsData = [
     tag: ["All", "Community"],
     gitUrl: ROOT_URL + "AmmoniumBot",
     previewUrl: "/",
+    technologies: ["Python", "PRAW", "Github Actions"],
   },
   {
     id: 2,
@@ -27,6 +29,7 @@ const projectsData = [
     tag: ["All", "Hackathon"],
     gitUrl: ROOT_URL + "FightingMyDemons",
     previewUrl: "/",
+    technologies: ["Python", "Pygame"],
   },
   {
     id: 3,
@@ -36,6 +39,7 @@ const projectsData = [
     tag: ["All", "Hackathon", "Community"],
     gitUrl: "https://github.com/Andrewyx/Loopy",
     previewUrl: "/",
+    technologies: ["JavaScript", "HTML/CSS", "React", "Tailwind CSS", "Firebase", "Google Maps API"],
   },
   {
     id: 4,
@@ -45,6 +49,7 @@ const projectsData = [
     tag: ["All", "School"],
     gitUrl: ROOT_URL + "HeartDiseaseClassifier",
     previewUrl: "/",
+    technologies: ["R", "Jupyter"],
   },
   {
     id: 5,
@@ -54,6 +59,7 @@ const projectsData = [
     tag: ["All", "School"],
     gitUrl: ROOT_URL + "IronInsight",
     previewUrl: "/",
+    technologies: ["Java", "Swing"],
   },
   {
     id: 6,
@@ -63,6 +69,7 @@ const projectsData = [
     tag: ["All", "Personal"],
     gitUrl: ROOT_URL + "PortfolioTracker",
     previewUrl: "/",
+    technologies: ["Python", "Google Sheets API", "Github Actions", "SMTP", "REST APIs"],
   },
   {
     id: 7,
@@ -72,6 +79,7 @@ const projectsData = [
     tag: ["All", "Hackathon"],
     gitUrl: "https://github.com/Andrewyx/slack-off",
     previewUrl: "/",
+    technologies: ["React", "JavaScript", "Python", "Flask", "OpenAI API", "Cohere API"],
   }
 ];
 
@@ -140,6 +148,7 @@ const ProjectsSection = () => {
               tags={project.tag}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
+              technologies={project.technologies}
             />
           </motion.li>
         ))}
