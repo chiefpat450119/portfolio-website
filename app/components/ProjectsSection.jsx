@@ -6,8 +6,6 @@ import { motion, useInView } from "framer-motion";
 
 // TODO: Update projects and github repos (make public if possible)
 // TODO: Update preview (make video links)
-// TODO: Add tags to the project cards to display technologies and frameworks used.
-// TODO: CHnage favicon
 const ROOT_URL = "https://github.com/chiefpat450119/";
 
 const projectsData = [
