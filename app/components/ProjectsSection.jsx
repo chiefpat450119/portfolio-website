@@ -6,6 +6,7 @@ import { motion, useInView } from "framer-motion";
 
 // TODO: Update projects and github repos (make public if possible)
 // TODO: Update preview (make video links)
+// TODO: Move projectsData to a separate file
 const ROOT_URL = "https://github.com/chiefpat450119/";
 
 const projectsData = [
@@ -18,6 +19,16 @@ const projectsData = [
     gitUrl: ROOT_URL + "AmmoniumBot",
     previewUrl: "/",
     technologies: ["Python", "PRAW", "Github Actions"],
+  },
+  {
+    id: 8,
+    title: "Tongue Tied Tales: GMTK 2024 Submission",
+    description: "A story-rich 2d platformer adventure featuring a hungry chameleon, unique physics and innovative puzzles. Developed for GMTK Game Jam 2024: Built to Scale.",
+    image: "/images/projects/tonguetiedtale.jpeg",
+    tag: ["All", "Hackathon"],
+    gitUrl: "https://github.com/Watercooled-Grapes/GMTK-2024",
+    previewUrl: "/",
+    technologies: ["Unity", "C#", "Github", "WebGL"],
   },
   {
     id: 2,
