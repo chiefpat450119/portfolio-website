@@ -22,7 +22,7 @@ const projectsData = [
   },
   {
     id: 8,
-    title: "Tongue Tied Tales: GMTK 2024 Submission",
+    title: "Tongue Tied Tale: GMTK 2024 Submission",
     description: "A story-rich 2d platformer adventure featuring a hungry chameleon, unique physics and innovative puzzles. Developed for GMTK Game Jam 2024: Built to Scale.",
     image: "/images/projects/tonguetiedtale.jpeg",
     tag: ["All", "Hackathon"],
