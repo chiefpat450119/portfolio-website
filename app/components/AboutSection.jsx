@@ -47,13 +47,6 @@ const TAB_DATA = [
   {
     title: "Awards",
     id: "awards",
-    // content: (
-    //   <ul className="list-disc pl-2">
-    //     <li>NwPlus HackCamp 2023 Winner &#40;$100 prize&#41;</li>
-    //     <li>$1500 Trek Scholarship for Continuing Students 2024, UBC</li>
-    //     <li>Dean&apos;s Scholar @ UBC</li>
-    //   </ul>
-    // ),
     content: [
       "NwPlus HackCamp 2023 Winner ($100 prize)",
       "$1500 Trek Scholarship for Continuing Students 2024, UBC",
@@ -125,7 +118,7 @@ const AboutSection = () => {
             currently work as an instructor at UBC Tennis Centre. Thriving off
             an interdiscplinary approach to creating and problem-solving, I am
             always seeking to incorporate my hobbies and my communities into the
-            projects I create; I&apos;m currently designing a website for the
+            projects I create: I&apos;m currently designing a website for the
             freelance tennis coaching company I co-founded and looking to
             develop my own turn-based tennis game.
           </p>
