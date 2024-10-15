@@ -38,8 +38,8 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Second year computer science student at the University of British
-            Columbia with an intense passion for learning and problem-solving.
+            Third year computer science student at the University of British
+            Columbia with an intense passion for learning, creating and problem-solving.
             Whether it&apos;s at a hackathon, in the gym, or on the tennis court, I&apos;m
             always looking for opportunites to hone my skills and expand my horizons.
           </p>
@@ -51,7 +51,7 @@ const HeroSection = () => {
               Contact Me
             </Link>
             <Link
-              href="https://drive.google.com/file/d/1IywPl00kdD-MpDUp_ZaqZPkNovw5FKdj/view?usp=sharing"
+              href="https://drive.google.com/file/d/1kcR5mUVMxGsY4XkGhl0ZhhF4LaM-7chx/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:from-primary-700 hover:to-secondary-700 text-white mt-3"

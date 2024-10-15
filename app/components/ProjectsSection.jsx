@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useRef } from "react";
-import ProjectCard from "./ProjectCard";
-import ProjectTag from "./ProjectTag";
+import ProjectCard from "./util/ProjectCard";
+import ProjectTag from "./util/ProjectTag";
 import { motion, useInView } from "framer-motion";
 
 // TODO: Update projects and github repos (make public if possible)
@@ -100,7 +100,7 @@ const cardVariants = {
 const ProjectsSection = () => {
   const [tag, setTag] = useState("All");
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { once: false });
 
   const handleTagChange = (newTag) => {
     setTag(newTag);
@@ -147,7 +147,7 @@ const ProjectsSection = () => {
           <motion.li 
             key={index}
             variants={cardVariants} initial="initial" animate={isInView ? "animate" : "initial"}
-            transition = {{ duration: 0.3, delay: index * 0.4 }}
+            transition = {{ duration: 0.3, delay: index * 0.3 }}
           >
             <ProjectCard
               key={project.id}

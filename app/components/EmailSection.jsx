@@ -1,5 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import GithubIcon from "../../public/github-icon.svg";
 import LinkedInIcon from "../../public/linkedin-icon.svg";
 import Link from "next/link";
@@ -7,6 +8,10 @@ import Image from "next/image";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const ref = useRef(null);
+  const inView = useInView(ref, {
+    amount: 0.5,
+  });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -40,13 +45,23 @@ const EmailSection = () => {
   };
 
   return (
-    <section className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative" id="contact">
-      <div className="z-10">
-        <h5 className="text-xl font-bold text-white my-2">Let&apos;s Connect</h5>
+    <section
+      className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
+      id="contact"
+    >
+      <motion.div
+        ref={ref}
+        animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+        className="z-10"
+      >
+        <h5 className="text-xl font-bold text-white my-2">
+          Let&apos;s Connect
+        </h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
           {" "}
-          I&apos;m always looking for new opportunities and people to collaborate with.
-          Whether you have questions or just want to discuss your favourite tennis player, don&apos;t hesitate to reach out!
+          I&apos;m always looking for new opportunities and people to
+          collaborate with. Whether you have questions or just want to discuss
+          your favourite tennis player, don&apos;t hesitate to reach out!
         </p>
         <div className="socials flex flex-row gap-2">
           <Link href="https://www.github.com/chiefpat450119">
@@ -56,9 +71,12 @@ const EmailSection = () => {
             <Image src={LinkedInIcon} alt="LinkedIn Icon" />
           </Link>
         </div>
-      </div>
+      </motion.div>
       <form className="flex flex-col" onSubmit={handleSubmit}>
-        <div className="mb-6">
+        <motion.div
+          animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+          className="mb-6"
+        >
           <label
             htmlFor="email"
             className="text-white block mb-2 text-sm font-medium "
@@ -66,15 +84,19 @@ const EmailSection = () => {
             Your Email
           </label>
           <input
-          name="email"
+            name="email"
             type="email"
             id="email"
             required
             className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
             placeholder="patrick@google.com"
           />
-        </div>
-        <div className="mb-6">
+        </motion.div>
+        <motion.div
+          animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+          transition={{ delay: 0.2 }}
+          className="mb-6"
+        >
           <label
             htmlFor="subject"
             className="text-white block text-sm mb-2 font-medium"
@@ -89,8 +111,12 @@ const EmailSection = () => {
             className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
             placeholder="I hate cilantro."
           />
-        </div>
-        <div className="mb-6">
+        </motion.div>
+        <motion.div
+          className="mb-6"
+          animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+          transition={{ delay: 0.4 }}
+        >
           <label
             htmlFor="message"
             className="text-white block text-sm mb-2 font-medium"
@@ -104,13 +130,15 @@ const EmailSection = () => {
             className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
             placeholder="I actually really hate cilantro."
           />
-        </div>
-        <button
+        </motion.div>
+        <motion.button
+          animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+          transition={{ delay: 0.6 }}
           type="submit"
           className="bg-gradient-to-br from-primary-500 to-secondary-500 hover:from-primary-700 hover:to-secondary-700 text-white font-medium py-2.5 px-5 rounded-lg w-full"
         >
           Send Message :D
-        </button>
+        </motion.button>
         {emailSubmitted && (
           <p className="text-green-400 text-sm mt-2">
             Email sent successfully!
