@@ -33,12 +33,7 @@ const TAB_DATA = [
   {
     title: "Experience",
     id: "experience",
-    // content: (
-    //   // <ul className="list-disc pl-2">
-    //   //   <li>Tennis Instructor @ UBC Recreation, Vancouver</li>
-    //   //   <li>Software Engineer Intern @ Project Flux, Singapore</li>
-    //   // </ul>
-    // ),
+
     content: [
       "Tennis Instructor @ UBC Recreation, Vancouver",
       "Software Engineer Intern @ Project Flux, Singapore",

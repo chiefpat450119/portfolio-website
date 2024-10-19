@@ -16,7 +16,7 @@ const variants = {
 const TabContent = ({ items, selectedTab }) => {
   return (
     <motion.div key={selectedTab} variants={variants} initial="hidden" animate="visible">
-      <ul className="list-disc pl-2">
+      <ul className="list-disc pl-2 marker:text-secondary-400">
         {items.map((item, index) => (
           <li key={index} className="text-white">
             {item}
