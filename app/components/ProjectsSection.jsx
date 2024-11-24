@@ -41,6 +41,16 @@ const projectsData = [
     technologies: ["Python", "Pygame"],
   },
   {
+    id: 9,
+    title: "CanDo Tennis Website",
+    description: "A website for CanDo Tennis, a freelance tennis coaching business I co-founded.",
+    image: "/images/projects/candotennis.png",
+    tag: ["All", "Community"],
+    gitUrl: ROOT_URL + "CandoTennis",
+    previewUrl: "https://candotennis.com",
+    technologies: ["Next.js", "React", "Tailwind CSS", "Typescript"],
+  },
+  {
     id: 3,
     title: "Loopy",
     description: "Maps API powered planner and rating system for Metro Vancouver transit routes.",

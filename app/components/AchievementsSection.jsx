@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import dynamic from "next/dynamic";
+import GitHubCalendar from "react-github-calendar";
 
 const AnimatedNumbers = dynamic(
   () => {
@@ -56,6 +57,10 @@ const AchievementsSection = () => {
           </div>
         ))}
       </div>
+      <div className="flex justify-center items-center mt-8 md:mt-16">
+        <GitHubCalendar username="chiefpat450119" />
+      </div>
+
     </div>
   );
 };

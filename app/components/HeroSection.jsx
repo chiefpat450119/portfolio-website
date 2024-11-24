@@ -69,13 +69,13 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
-          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] xl:w-[350px] xl:h-[350px] relative">
             <Image
               src="/images/pfp2.jpg"
               alt="hero image"
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-full object-cover"
-              width={300}
-              height={300}
+              width={3398}
+              height={3398}
             />
           </div>
         </motion.div>
