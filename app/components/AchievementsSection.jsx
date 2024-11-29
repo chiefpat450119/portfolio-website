@@ -18,7 +18,7 @@ const achievementsList = [
   },
   {
     metric: "Hackathons",
-    value: "3",
+    value: "4",
   },
   {
     metric: "Years of Experience",
