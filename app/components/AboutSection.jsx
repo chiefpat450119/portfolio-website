@@ -4,51 +4,7 @@ import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import TabButton from "./util/TabButton";
 import TabContent from "./util/TabContent";
-
-// TODO: Move this to a separate file, Not urgent.
-const TAB_DATA = [
-  {
-    title: "Current Involvement",
-    id: "current",
-    content: [
-      "3rd Year Computer Science Student @ UBC",
-      "Tennis Instructor @ UBC Recreation, Vancouver",
-      "Game Developer @ UBC Game Dev Club",
-      "Relations Coordinator @ GDSC UBC",
-    ],
-  },
-  {
-    title: "Skills",
-    id: "skills",
-    content: [
-      "Python",
-      "JavaScript",
-      "HTML/CSS",
-      "Next.js + React",
-      "Java",
-      "Jupyter",
-      "R",
-    ],
-  },
-  {
-    title: "Experience",
-    id: "experience",
-
-    content: [
-      "Tennis Instructor @ UBC Recreation, Vancouver",
-      "Software Engineer Intern @ Project Flux, Singapore",
-    ],
-  },
-  {
-    title: "Awards",
-    id: "awards",
-    content: [
-      "NwPlus HackCamp 2023 Winner ($100 prize)",
-      "$1500 Trek Scholarship for Continuing Students 2024, UBC",
-      "Dean's Scholar @ UBC",
-    ],
-  },
-];
+import { TAB_DATA } from "@/constants";
 
 const AboutSection = () => {
   const [tab, setTab] = useState("current");
