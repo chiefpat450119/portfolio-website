@@ -10,7 +10,7 @@ export const PROJECTS_DATA = [
       image: "/images/projects/ammoniumbot.png",
       tag: ["All", "Community"],
       gitUrl: ROOT_URL + "AmmoniumBot",
-      previewUrl: "/",
+      previewUrl: "https://www.reddit.com/user/ammonium_bot/",
       technologies: ["Python", "PRAW", "Github Actions"],
     },
     {
@@ -20,7 +20,7 @@ export const PROJECTS_DATA = [
       image: "/images/projects/tonguetiedtale.jpeg",
       tag: ["All", "Hackathon"],
       gitUrl: "https://github.com/Watercooled-Grapes/GMTK-2024",
-      previewUrl: "/",
+      previewUrl: "https://andrewyx.itch.io/tongue-tied-tale",
       technologies: ["Unity", "C#", "Github", "WebGL"],
     },
     {
@@ -30,8 +30,18 @@ export const PROJECTS_DATA = [
       image: "/images/projects/fightingmydemons.png",
       tag: ["All", "Hackathon"],
       gitUrl: ROOT_URL + "FightingMyDemons",
-      previewUrl: "/",
+      previewUrl: "https://devpost.com/software/fighting-my-demons",
       technologies: ["Python", "Pygame"],
+    },
+    {
+      id: 10, 
+      title: "CredEat",
+      description: "A web app that helps users find healthy recipes with a one-click nutrition rating system.",
+      image: "/images/projects/credeat.jpg",
+      tag: ["All", "Community", "Hackathon"],
+      gitUrl: "https://github.com/pnotato/CredEat",
+      previewUrl: "https://devpost.com/software/credeat",
+      technologies: ["React", "Python", "Flask"],
     },
     {
       id: 9,
@@ -50,7 +60,7 @@ export const PROJECTS_DATA = [
       image: "/images/projects/loopy.png",
       tag: ["All", "Hackathon", "Community"],
       gitUrl: "https://github.com/Andrewyx/Loopy",
-      previewUrl: "/",
+      previewUrl: "https://devpost.com/software/loopy-izvt34",
       technologies: ["JavaScript", "HTML/CSS", "React", "Tailwind CSS", "Firebase", "Google Maps API"],
     },
     {
@@ -90,7 +100,7 @@ export const PROJECTS_DATA = [
       image: "/images/projects/slackoff.jpg",
       tag: ["All", "Hackathon"],
       gitUrl: "https://github.com/Andrewyx/slack-off",
-      previewUrl: "/",
+      previewUrl: "https://devpost.com/software/slack-off",
       technologies: ["React", "JavaScript", "Python", "Flask", "OpenAI API", "Cohere API"],
     }
   ];
@@ -101,6 +111,7 @@ export const PROJECTS_DATA = [
       id: "current",
       content: [
         "3rd Year Computer Science Student @ UBC",
+        "Software Engineer Intern @ Rivian and VW Group Technologies, Vancouver",
         "Tennis Instructor @ UBC Recreation, Vancouver",
         "Game Developer @ UBC Game Dev Club",
         "Relations Coordinator @ GDSC UBC",
@@ -112,6 +123,7 @@ export const PROJECTS_DATA = [
       content: [
         "Python",
         "JavaScript",
+        "C#",
         "HTML/CSS",
         "Next.js + React",
         "Java",
@@ -124,6 +136,7 @@ export const PROJECTS_DATA = [
       id: "experience",
   
       content: [
+        "Software Engineer Intern @ Rivian and VW Group Technologies, Vancouver",
         "Tennis Instructor @ UBC Recreation, Vancouver",
         "Software Engineer Intern @ Project Flux, Singapore",
       ],

@@ -25,7 +25,7 @@ const AboutSection = () => {
     <section className="text-white" id="about">
       <div
         ref={ref}
-        className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16"
+        className="md:grid md:grid-cols-2 gap-8 items-center py-6 px-4 xl:gap-16 sm:py-12 xl:px-16"
       >
         <motion.div
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
