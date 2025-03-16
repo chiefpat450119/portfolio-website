@@ -37,7 +37,7 @@ const HeroSection = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
+          <p className="text-[#ADB7BE] text-base lg:text-lg mb-6 xl:text-xl">
             Third year computer science student at the University of British
             Columbia with an intense passion for learning, creating and problem-solving.
             Whether it&apos;s at a hackathon, in the gym, or on the tennis court, I&apos;m
@@ -69,13 +69,13 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-4 place-self-center mt-6 lg:mt-0"
         >
-          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] xl:w-[350px] xl:h-[350px] relative">
+          <div className="rounded-full bg-[#181818] w-[175px] h-[175px] md:w-[225px] md:h-[225px] xl:w-[350px] xl:h-[350px] relative">
             <Image
-              src="/images/pfp2.jpg"
+              src="/images/pfp.jpg"
               alt="hero image"
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-full object-cover"
-              width={3398}
-              height={3398}
+              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-full object-cover h-full w-full"
+              width={3580}
+              height={6528}
             />
           </div>
         </motion.div>

@@ -30,7 +30,7 @@ const achievementsList = [
 const AchievementsSection = () => {
   return (
     <div className="py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-      <div className="sm:border-[#33353F] sm:border rounded-md py-6 px-16 mx-12 flex flex-col sm:flex-row items-center justify-between">
+      <div className="sm:border-secondary-400 sm:border rounded-md py-6 px-16 mx-12 flex flex-col sm:flex-row items-center justify-between">
         {achievementsList.map((achievement, index) => (
           <div
             key={index}
@@ -57,7 +57,7 @@ const AchievementsSection = () => {
           </div>
         ))}
       </div>
-      <div className="rounded-xl flex justify-center items-center px-8 mt-4 md:mx-12 md:mt-8 py-4 md:py-8 bg-primary-500">
+      <div className="rounded-xl flex justify-center items-center px-8 mt-4 md:mx-12 md:mt-8 py-4 md:py-8 sm:border sm:border-primary-500">
         <GitHubCalendar username="chiefpat450119" colorScheme="dark" />
       </div>
 
