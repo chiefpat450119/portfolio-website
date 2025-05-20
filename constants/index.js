@@ -34,6 +34,16 @@ export const PROJECTS_DATA = [
       technologies: ["Python", "Pygame"],
     },
     {
+      id: 11,
+      title: "Slime Succumber: UBC Game Dev Club Team 5 2024/25",
+      description: "A mobile roguelike developed in Godot where the player is a slime monster who must survive waves of human enemies.",
+      image: "/images/projects/ss.png",
+      tag: ["All"],
+      gitUrl: "https://github.com/Arakruz/ubc-game-dev-team-5",
+      previewUrl: "/",
+      technologies: ["Godot", "C#"],
+    },
+    {
       id: 10, 
       title: "CredEat",
       description: "A web app that helps users find healthy recipes with a one-click nutrition rating system.",
@@ -112,7 +122,6 @@ export const PROJECTS_DATA = [
       content: [
         "3rd Year Computer Science Student @ UBC",
         "Software Engineer Intern @ Rivian and VW Group Technologies, Vancouver",
-        "Tennis Instructor @ UBC Recreation, Vancouver",
         "Game Developer @ UBC Game Dev Club",
         "Relations Coordinator @ GDSC UBC",
       ],
@@ -146,6 +155,8 @@ export const PROJECTS_DATA = [
       content: [
         "NwPlus HackCamp 2023 Winner ($100 prize)",
         "$1500 Trek Scholarship for Continuing Students 2024, UBC",
+        "2024W UBC Computer Science Scholarship",
+        "2024W Greer Family Scholarship",
         "Dean's Scholar @ UBC",
       ],
     },
