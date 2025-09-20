@@ -5,13 +5,13 @@ const ROOT_URL = "https://github.com/chiefpat450119/";
 export const PROJECTS_DATA = [
     {
       id: 1,
-      title: "Ammonium Bot",
-      description: "Reddit bot that helps users with common grammatical and etymological mistakes.",
-      image: "/images/projects/ammoniumbot.png",
-      tag: ["All", "Community"],
-      gitUrl: ROOT_URL + "AmmoniumBot",
-      previewUrl: "https://www.reddit.com/user/ammonium_bot/",
-      technologies: ["Python", "PRAW", "Github Actions"],
+      title: "ThirdEye",
+      description: "A virtual guide dog in your pocket, ThirdEye is a voice-activated smart camera that helps visually impaired users navigate their surroundings, featuring photographic memory (literally) that allows recall with spoken queries.",
+      image: "/images/projects/thirdeye.png",
+      tag: ["All", "Hackathon"],
+      gitUrl: "https://github.com/briannval/HTN-2025",
+      previewUrl: "https://devpost.com/software/thirdeye-rdgtha",
+      technologies: ["Raspberry Pi", "DynamoDB", "AWS Lambda", "OpenSearch", "Python", "Cohere API"],
     },
     {
       id: 8,
@@ -64,6 +64,16 @@ export const PROJECTS_DATA = [
       technologies: ["Next.js", "React", "Tailwind CSS", "Typescript"],
     },
     {
+      id: 5,
+      title: "Ammonium Bot",
+      description: "Reddit bot that helps users with common grammatical and etymological mistakes.",
+      image: "/images/projects/ammoniumbot.png",
+      tag: ["All", "Community"],
+      gitUrl: ROOT_URL + "AmmoniumBot",
+      previewUrl: "https://www.reddit.com/user/ammonium_bot/",
+      technologies: ["Python", "PRAW", "Github Actions"],
+    },
+    {
       id: 3,
       title: "Loopy",
       description: "Maps API powered planner and rating system for Metro Vancouver transit routes.",
@@ -84,7 +94,7 @@ export const PROJECTS_DATA = [
       technologies: ["R", "Jupyter"],
     },
     {
-      id: 5,
+      id: 12,
       title: "Iron Insight",
       description: "Java desktop application for tracking strength training progress.",
       image: "/images/projects/ironinsight.png",
