@@ -4,6 +4,16 @@ const ROOT_URL = "https://github.com/chiefpat450119/";
 
 export const PROJECTS_DATA = [
     {
+      id: 0,
+      title: "Project Starhaven",
+      description: "A narrative-driven isometric space colony city builders. Manage resources, keep your colonists alive and happy, and weather both the elements and the demands of your overbearing boss! I Led development of the game design, writing and programming for this project developed in Godot as part of UBC Game Dev Club.",
+      image: "/images/projects/projectstarhaven.png",
+      tag: ["All", "Community"],
+      gitUrl: ROOT_URL + "ProjectStarhaven",
+      previewUrl: "https://patrickzhou45.itch.io/projectstarhaven",
+      technologies: ["Godot", "C#", "GLSL"],
+    },
+    {
       id: 1,
       title: "ThirdEye",
       description: "A virtual guide dog in your pocket, ThirdEye is a voice-activated smart camera that helps visually impaired users navigate their surroundings, featuring photographic memory (literally) that allows recall with spoken queries.",
@@ -130,10 +140,9 @@ export const PROJECTS_DATA = [
       title: "Current Involvement",
       id: "current",
       content: [
-        "3rd Year Computer Science Student @ UBC",
-        "Software Engineer Intern @ Rivian and VW Group Technologies, Vancouver",
+        "4th Year Computer Science Student @ UBC",
+        "Software Engineer Intern @ Shopify, Toronto",
         "Game Developer @ UBC Game Dev Club",
-        "Relations Coordinator @ GDSC UBC",
       ],
     },
     {
@@ -154,9 +163,9 @@ export const PROJECTS_DATA = [
       id: "experience",
   
       content: [
+        "Software Engineer Intern @ Shopify, Toronto",
         "Software Engineer Intern @ Rivian and VW Group Technologies, Vancouver",
-        "Tennis Instructor @ UBC Recreation, Vancouver",
-        "Software Engineer Intern @ Project Flux, Singapore",
+        "Tennis Instructor @ UBC Recreation, Vancouver"
       ],
     },
     {
@@ -164,10 +173,11 @@ export const PROJECTS_DATA = [
       id: "awards",
       content: [
         "NwPlus HackCamp 2023 Winner ($100 prize)",
-        "$1500 Trek Scholarship for Continuing Students 2024, UBC",
+        "$1500 Trek Scholarship for Continuing Students 2024 & 2025, UBC",
         "2024W UBC Computer Science Scholarship",
         "2024W Greer Family Scholarship",
-        "Dean's Scholar @ UBC",
+        "2024W Dean of Science Scholarship",
+        "2025W UBC Computer Science Scholarship",
       ],
     },
   ];

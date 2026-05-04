@@ -38,7 +38,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base lg:text-lg mb-6 xl:text-xl">
-            Third year computer science student at the University of British
+            Fourth year computer science student at the University of British
             Columbia with an intense passion for learning, creating and problem-solving.
             Whether it&apos;s at a hackathon, in the gym, or on the tennis court, I&apos;m
             always looking for opportunites to hone my skills and expand my horizons.
@@ -51,7 +51,7 @@ const HeroSection = () => {
               Contact Me
             </Link>
             <a
-              href="/resume.pdf"
+              href="/resume/Patrick_Zhou_resume_May_2026.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:from-primary-700 hover:to-secondary-700 text-white mt-3"

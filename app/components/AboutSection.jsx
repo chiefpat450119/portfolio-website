@@ -56,22 +56,10 @@ const AboutSection = () => {
             About Patrick Zhou
           </h2>
           <p className="text-base lg:text-lg">
-            I&apos;m passionate about creating and problem solving in many
-            fields of software development. As an avid scripter, I enjoy
-            automating things with code and have a wealth of experience in
-            designing and writing Python scripts. However, my current passion is
-            game development; I submitted a winning game project at a hackathon
-            and participated in GMTK Game Jam 2024, placing in the top 25% with
-            my team.
+            I&apos;m passionate about creating and problem solving in many fields of software development. As an avid scripter, I enjoy automating things with code and have a wealth of experience in designing and writing Python scripts. My current passion is game development: I am currently developing Project Starhaven, a narrative-driven isometric space colony city builder, and have experience in game development with both Unity and Godot. 
             <br />
             <br />
-            Outside of tech, I&apos;m a tennis and fitness enthusiast and
-            currently work as an instructor at UBC Tennis Centre. Thriving off
-            an interdiscplinary approach to creating and problem-solving, I am
-            always seeking to incorporate my hobbies and my communities into the
-            projects I create: I&apos;m currently designing a website for the
-            freelance tennis coaching company I co-founded and looking to
-            develop my own turn-based tennis game.
+            Outside of tech, I&apos;m a tennis and fitness enthusiast, and a huge sci-fi and space nerd. Thriving off an interdiscplinary approach to creating and problem-solving, I am always seeking to incorporate my hobbies and my communities into the projects I create, including Project Starhaven and a freelance tennis coaching platform I cofounded. Check out my other projects in the Projects section below!
           </p>
           <div className="flex flex-row justify-start mt-8">
             {TAB_DATA.map((data) => (
