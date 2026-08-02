@@ -3,23 +3,24 @@ import { motion } from "framer-motion";
 
 const variants = {
   default: { width: 0 },
-  active: { width: "calc(100% - 0.75rem)" },
+  active: { width: "100%" },
 };
-const TabButton = ({ active, selectTab, children }) => {
-  const buttonClasses = active
-    ? "text-white"
-    : "text-[#ADB7BE]";
 
+const TabButton = ({ active, selectTab, children }) => {
   return (
-    <button onClick={selectTab}>
-      <p className={`mr-3 font-semibold hover:text-white ${buttonClasses}`}>
-        {children}
-      </p>
+    <button
+      onClick={selectTab}
+      className={`relative px-4 py-2 text-sm font-semibold transition-colors duration-150 ${
+        active ? "text-[#f0edf8]" : "text-[#8b82a8] hover:text-[#f0edf8]"
+      }`}
+    >
+      {children}
       <motion.div
         variants={variants}
         animate={active ? "active" : "default"}
-        className="h-1 bg-primary-500 mt-2 mr-3"
-      ></motion.div>
+        transition={{ duration: 0.2 }}
+        className="absolute bottom-0 left-0 h-[2px] bg-primary-500"
+      />
     </button>
   );
 };

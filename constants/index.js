@@ -6,9 +6,9 @@ export const PROJECTS_DATA = [
     {
       id: 0,
       title: "Project Starhaven",
-      description: "A narrative-driven isometric space colony city builders. Manage resources, keep your colonists alive and happy, and weather both the elements and the demands of your overbearing boss! I Led development of the game design, writing and programming for this project developed in Godot as part of UBC Game Dev Club.",
+      description: "A narrative-driven isometric space colony city builder. Manage resources, keep your colonists alive and happy, and weather both the elements and the demands of your overbearing boss! Led development of the game design, writing and programming for this project developed in Godot as part of UBC Game Dev Club.",
       image: "/images/projects/projectstarhaven.png",
-      tag: ["All", "Community"],
+      tag: ["All", "Game Dev", "Community"],
       gitUrl: ROOT_URL + "ProjectStarhaven",
       previewUrl: "https://patrickzhou45.itch.io/projectstarhaven",
       technologies: ["Godot", "C#", "GLSL"],
@@ -16,7 +16,7 @@ export const PROJECTS_DATA = [
     {
       id: 1,
       title: "ThirdEye",
-      description: "A virtual guide dog in your pocket, ThirdEye is a voice-activated smart camera that helps visually impaired users navigate their surroundings, featuring photographic memory (literally) that allows recall with spoken queries.",
+      description: "A virtual guide dog in your pocket. ThirdEye is a voice-activated smart camera that helps visually impaired users navigate their surroundings, featuring photographic memory (literally) that allows recall with spoken queries.",
       image: "/images/projects/thirdeye.png",
       tag: ["All", "Hackathon"],
       gitUrl: "https://github.com/briannval/HTN-2025",
@@ -26,9 +26,9 @@ export const PROJECTS_DATA = [
     {
       id: 8,
       title: "Tongue Tied Tale: GMTK 2024 Submission",
-      description: "A story-rich 2d platformer adventure featuring a hungry chameleon, unique physics and innovative puzzles. Developed for GMTK Game Jam 2024: Built to Scale.",
+      description: "A story-rich 2D platformer adventure featuring a hungry chameleon, unique physics and innovative puzzles. Developed for GMTK Game Jam 2024: Built to Scale.",
       image: "/images/projects/tonguetiedtale.jpeg",
-      tag: ["All", "Hackathon"],
+      tag: ["All", "Game Dev", "Hackathon"],
       gitUrl: "https://github.com/Watercooled-Grapes/GMTK-2024",
       previewUrl: "https://andrewyx.itch.io/tongue-tied-tale",
       technologies: ["Unity", "C#", "Github", "WebGL"],
@@ -38,7 +38,7 @@ export const PROJECTS_DATA = [
       title: "Fighting My Demons: HackCamp 2023 Winning Submission",
       description: "An innovative game that stops users from snoozing their alarms in the morning.",
       image: "/images/projects/fightingmydemons.png",
-      tag: ["All", "Hackathon"],
+      tag: ["All", "Game Dev", "Hackathon"],
       gitUrl: ROOT_URL + "FightingMyDemons",
       previewUrl: "https://devpost.com/software/fighting-my-demons",
       technologies: ["Python", "Pygame"],
@@ -48,13 +48,13 @@ export const PROJECTS_DATA = [
       title: "Slime Succumber: UBC Game Dev Club Team 5 2024/25",
       description: "A mobile roguelike developed in Godot where the player is a slime monster who must survive waves of human enemies.",
       image: "/images/projects/ss.png",
-      tag: ["All"],
+      tag: ["All", "Game Dev"],
       gitUrl: "https://github.com/Arakruz/ubc-game-dev-team-5",
       previewUrl: "/",
       technologies: ["Godot", "C#"],
     },
     {
-      id: 10, 
+      id: 10,
       title: "CredEat",
       description: "A web app that helps users find healthy recipes with a one-click nutrition rating system.",
       image: "/images/projects/credeat.jpg",
@@ -116,7 +116,7 @@ export const PROJECTS_DATA = [
     {
       id: 6,
       title: "Portfolio Tracker",
-      description: "Personal invesment tracker built with Python, Sheets API and GitHub Actions.",
+      description: "Personal investment tracker built with Python, Sheets API and GitHub Actions.",
       image: "/images/projects/portfolio.jpg",
       tag: ["All", "Personal"],
       gitUrl: ROOT_URL + "PortfolioTracker",
@@ -133,6 +133,45 @@ export const PROJECTS_DATA = [
       previewUrl: "https://devpost.com/software/slack-off",
       technologies: ["React", "JavaScript", "Python", "Flask", "OpenAI API", "Cohere API"],
     }
+  ];
+
+  export const EXPERIENCE_DATA = [
+    {
+      id: 0,
+      role: "Software Engineer Intern",
+      company: "Shopify",
+      location: "Toronto, ON",
+      period: "May 2025 – Aug 2025",
+      bullets: [
+        "Worked on internal tooling and developer experience improvements.",
+        "Collaborated with cross-functional teams in a large-scale Ruby on Rails and React environment.",
+      ],
+      technologies: ["Ruby on Rails", "React", "Kotlin", "GraphQL"],
+    },
+    {
+      id: 1,
+      role: "Software Engineer Intern",
+      company: "Rivian and VW Group Technologies",
+      location: "Vancouver, BC",
+      period: "Summer 2024",
+      bullets: [
+        "Developed features for internal software systems supporting automotive software platforms.",
+        "Worked across full-stack environments in an agile team setting.",
+      ],
+      technologies: ["Python", "TypeScript", "React", "REST APIs"],
+    },
+    {
+      id: 2,
+      role: "Tennis Instructor",
+      company: "UBC Recreation",
+      location: "Vancouver, BC",
+      period: "2023 – Present",
+      bullets: [
+        "Coach recreational and competitive players of all skill levels.",
+        "Co-founded CanDo Tennis, a freelance tennis coaching platform.",
+      ],
+      technologies: [],
+    },
   ];
 
   export const TAB_DATA = [
@@ -153,19 +192,20 @@ export const PROJECTS_DATA = [
         "Kotlin",
         "JavaScript",
         "C#",
-        "Next.js/React",
+        "Next.js / React",
         "Java",
         "R",
+        "Godot",
+        "Unity",
       ],
     },
     {
       title: "Experience",
       id: "experience",
-  
       content: [
         "Software Engineer Intern @ Shopify, Toronto",
         "Software Engineer Intern @ Rivian and VW Group Technologies, Vancouver",
-        "Tennis Instructor @ UBC Recreation, Vancouver"
+        "Tennis Instructor @ UBC Recreation, Vancouver",
       ],
     },
     {

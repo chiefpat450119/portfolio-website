@@ -5,78 +5,99 @@ import ProjectTag from "./util/ProjectTag";
 import { motion, useInView } from "framer-motion";
 import { PROJECTS_DATA } from "@/constants";
 
-// TODO: Update projects and github repos (make public if possible)
-// TODO: Update preview (make video links)
-
 const cardVariants = {
-  initial: { y: 50, opacity: 0 },
+  initial: { y: 30, opacity: 0 },
   animate: { y: 0, opacity: 1 },
 };
+
+// Featured project ID — displayed full-width at the top
+const FEATURED_ID = 0; // Project Starhaven
 
 const ProjectsSection = () => {
   const [tag, setTag] = useState("All");
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
+  const isInView = useInView(ref, { once: false, amount: 0.05 });
 
   const handleTagChange = (newTag) => {
     setTag(newTag);
   };
 
-  const filteredProjects = PROJECTS_DATA.filter((project) => 
+  const filteredProjects = PROJECTS_DATA.filter((project) =>
     project.tag.includes(tag)
   );
 
+  const featuredProject = filteredProjects.find((p) => p.id === FEATURED_ID);
+  const otherProjects = filteredProjects.filter((p) => p.id !== FEATURED_ID);
+
   return (
-    <section id="projects">
-      <h2 className="text-center text-4xl font-bold text-white mt-8 mb-8 md:mb-12">
-        My Projects
+    <section id="projects" className="py-12 px-4 xl:px-16">
+      <h2 className="font-heading text-3xl font-bold text-[#f0edf8] tracking-tight mb-8">
+        Projects
       </h2>
-      <div className="text-white flex flex-col md:flex-row justify-center items-center gap-2 py-6">
-        <ProjectTag
-          onClick={handleTagChange}
-          name="All"
-          isSelected={tag === "All"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Hackathon"
-          isSelected={tag === "Hackathon"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Personal"
-          isSelected={tag === "Personal"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Community"
-          isSelected={tag === "Community"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="School"
-          isSelected={tag === "School"}
-        />
+
+      {/* Filter tags */}
+      <div className="text-[#f0edf8] flex flex-wrap gap-2 py-4 mb-6">
+        {["All", "Game Dev", "Hackathon", "Personal", "Community", "School"].map(
+          (name) => (
+            <ProjectTag
+              key={name}
+              onClick={handleTagChange}
+              name={name}
+              isSelected={tag === name}
+            />
+          )
+        )}
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {filteredProjects.map((project, index) => (
-          <motion.li 
-            key={index}
-            variants={cardVariants} initial="initial" animate={isInView ? "animate" : "initial"}
-            transition = {{ duration: 0.3, delay: index * 0.3 }}
+
+      <ul ref={ref} className="flex flex-col gap-8">
+        {/* Featured card — full width */}
+        {featuredProject && (
+          <motion.li
+            variants={cardVariants}
+            initial="initial"
+            animate={isInView ? "animate" : "initial"}
+            transition={{ duration: 0.4 }}
           >
             <ProjectCard
-              key={project.id}
-              title={project.title}
-              description={project.description}
-              imgUrl={project.image}
-              tags={project.tag}
-              gitUrl={project.gitUrl}
-              previewUrl={project.previewUrl}
-              technologies={project.technologies}
+              key={featuredProject.id}
+              title={featuredProject.title}
+              description={featuredProject.description}
+              imgUrl={featuredProject.image}
+              tags={featuredProject.tag}
+              gitUrl={featuredProject.gitUrl}
+              previewUrl={featuredProject.previewUrl}
+              technologies={featuredProject.technologies}
+              featured
             />
           </motion.li>
-        ))}
+        )}
+
+        {/* Grid of remaining projects */}
+        {otherProjects.length > 0 && (
+          <li>
+            <ul className="grid md:grid-cols-3 gap-6">
+              {otherProjects.map((project, index) => (
+                <motion.li
+                  key={project.id}
+                  variants={cardVariants}
+                  initial="initial"
+                  animate={isInView ? "animate" : "initial"}
+                  transition={{ duration: 0.35, delay: (index + 1) * 0.08 }}
+                >
+                  <ProjectCard
+                    title={project.title}
+                    description={project.description}
+                    imgUrl={project.image}
+                    tags={project.tag}
+                    gitUrl={project.gitUrl}
+                    previewUrl={project.previewUrl}
+                    technologies={project.technologies}
+                  />
+                </motion.li>
+              ))}
+            </ul>
+          </li>
+        )}
       </ul>
     </section>
   );

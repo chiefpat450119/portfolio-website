@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const variants = {
   hidden: {
     opacity: 0,
-    x: -50,
+    x: -20,
   },
   visible: {
     opacity: 1,
@@ -15,11 +15,18 @@ const variants = {
 
 const TabContent = ({ items, selectedTab }) => {
   return (
-    <motion.div key={selectedTab} variants={variants} initial="hidden" animate="visible">
-      <ul className="list-disc pl-2 marker:text-secondary-400">
+    <motion.div
+      key={selectedTab}
+      variants={variants}
+      initial="hidden"
+      animate="visible"
+      transition={{ duration: 0.2 }}
+    >
+      <ul className="space-y-2 pl-0">
         {items.map((item, index) => (
-          <li key={index} className="text-white">
-            {item}
+          <li key={index} className="text-[#8b82a8] text-sm flex gap-2 items-start">
+            <span className="text-primary-500 mt-0.5 flex-shrink-0">—</span>
+            <span>{item}</span>
           </li>
         ))}
       </ul>
