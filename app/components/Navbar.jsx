@@ -16,7 +16,7 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-10 bg-[#0d0a14] border-b border-[#3d2b6b]">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0d0a14] border-b border-[#3d2b6b]">
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-6 py-3">
         {/* Logo / name */}
         <Link
