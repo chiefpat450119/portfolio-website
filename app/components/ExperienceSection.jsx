@@ -9,79 +9,108 @@ const ExperienceSection = () => {
 
   return (
     <section id="experience" className="py-12 px-4 xl:px-16">
-      <h2 className="font-heading text-3xl font-bold text-[#f0edf8] tracking-tight mb-12">
+      <h2 className="font-heading text-3xl font-bold text-[#f0edf8] tracking-tight mb-16">
         Experience
       </h2>
 
       <div ref={ref} className="relative">
-        {/* Vertical spine */}
+        {/* ── Desktop spine ── */}
         <div
           className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-[#3d2b6b]"
           aria-hidden="true"
         />
-        {/* Mobile spine — left aligned */}
+        {/* ── Mobile spine ── */}
         <div
-          className="block md:hidden absolute left-4 top-0 bottom-0 w-px bg-[#3d2b6b]"
+          className="block md:hidden absolute left-5 top-0 bottom-0 w-px bg-[#3d2b6b]"
           aria-hidden="true"
         />
 
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-14">
           {EXPERIENCE_DATA.map((item, index) => {
             const isLeft = index % 2 === 0;
             return (
-              <div key={item.id} className="relative md:grid md:grid-cols-2 md:gap-8">
-                {/* Connector dot — desktop */}
+              <div key={item.id} className="relative">
+
+                {/* ══ Desktop layout ══ */}
+                <div className="hidden md:grid md:grid-cols-2">
+
+                  {isLeft ? (
+                    <>
+                      {/* Card — left side */}
+                      <motion.div
+                        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -36 }}
+                        transition={{ duration: 0.5, delay: index * 0.12 }}
+                        className="pr-14 flex justify-end"
+                      >
+                        <ExperienceCard item={item} />
+                      </motion.div>
+
+                      {/* Date label — right of spine */}
+                      <motion.div
+                        animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+                        transition={{ duration: 0.4, delay: index * 0.12 + 0.15 }}
+                        className="pl-14 flex items-start pt-3"
+                      >
+                        <DateLabel period={item.period} />
+                      </motion.div>
+                    </>
+                  ) : (
+                    <>
+                      {/* Date label — left of spine */}
+                      <motion.div
+                        animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+                        transition={{ duration: 0.4, delay: index * 0.12 + 0.15 }}
+                        className="pr-14 flex items-start justify-end pt-3"
+                      >
+                        <DateLabel period={item.period} alignRight />
+                      </motion.div>
+
+                      {/* Card — right side */}
+                      <motion.div
+                        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 36 }}
+                        transition={{ duration: 0.5, delay: index * 0.12 }}
+                        className="pl-14"
+                      >
+                        <ExperienceCard item={item} />
+                      </motion.div>
+                    </>
+                  )}
+                </div>
+
+                {/* ── Desktop connector dot ── */}
                 <div
-                  className="hidden md:block absolute left-1/2 top-6 -translate-x-1/2 w-3 h-3 bg-primary-600 border-2 border-primary-400 z-10"
-                  aria-hidden="true"
-                />
-                {/* Connector dot — mobile */}
-                <div
-                  className="block md:hidden absolute left-4 top-6 -translate-x-1/2 w-3 h-3 bg-primary-600 border-2 border-primary-400 z-10"
+                  className="hidden md:block absolute left-1/2 top-4 -translate-x-1/2 w-3 h-3 bg-primary-600 border-2 border-primary-400 z-10"
                   aria-hidden="true"
                 />
 
-                {/* Left column placeholder / card (desktop alternating) */}
-                {isLeft ? (
-                  <>
-                    <motion.div
-                      animate={
-                        isInView
-                          ? { opacity: 1, x: 0 }
-                          : { opacity: 0, x: -40 }
-                      }
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      className="hidden md:block md:col-start-1 md:pr-10 pl-4"
-                    >
-                      <ExperienceCard item={item} />
-                    </motion.div>
-                    <div className="hidden md:block md:col-start-2" />
-                  </>
-                ) : (
-                  <>
-                    <div className="hidden md:block md:col-start-1" />
-                    <motion.div
-                      animate={
-                        isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 40 }
-                      }
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      className="hidden md:block md:col-start-2 md:pl-10 pr-4"
-                    >
-                      <ExperienceCard item={item} />
-                    </motion.div>
-                  </>
-                )}
+                {/* ══ Mobile layout ══ */}
+                <div className="block md:hidden">
+                  {/* Date label above card */}
+                  <motion.div
+                    animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.12 }}
+                    className="pl-12 mb-2"
+                  >
+                    <span className="font-heading text-[10px] tracking-widest text-[#8b82a8] uppercase">
+                      {item.period}
+                    </span>
+                  </motion.div>
 
-                {/* Mobile — always full width, indented past spine */}
-                <motion.div
-                  animate={
-                    isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }
-                  }
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="block md:hidden pl-10"
-                >
-                  <ExperienceCard item={item} />
-                </motion.div>
+                  {/* Connector dot — mobile */}
+                  <div
+                    className="absolute left-5 top-6 -translate-x-1/2 w-3 h-3 bg-primary-600 border-2 border-primary-400 z-10"
+                    aria-hidden="true"
+                  />
+
+                  <motion.div
+                    animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
+                    transition={{ duration: 0.5, delay: index * 0.12 + 0.1 }}
+                    className="pl-12"
+                  >
+                    <ExperienceCard item={item} />
+                  </motion.div>
+                </div>
+
               </div>
             );
           })}
@@ -91,46 +120,73 @@ const ExperienceSection = () => {
   );
 };
 
+// ── Date label shown on the spine ────────────────────────────────────────────
+const DateLabel = ({ period, alignRight = false }) => (
+  <div className={`flex flex-col gap-0.5 ${alignRight ? "items-end" : "items-start"}`}>
+    {period.split("–").map((part, i) => (
+      <span
+        key={i}
+        className="font-heading text-[10px] tracking-widest text-[#8b82a8] uppercase leading-tight"
+      >
+        {part.trim()}
+      </span>
+    ))}
+  </div>
+);
+
+// ── Card: collapsed by default, reveals details on hover ─────────────────────
 const ExperienceCard = ({ item }) => (
-  <div className="bg-[#1a1425] border border-[#3d2b6b] p-5 hover:border-primary-600 transition-colors duration-200">
-    <div className="flex items-start justify-between flex-wrap gap-2 mb-3">
-      <div>
-        <h3 className="text-[#f0edf8] font-semibold text-base leading-snug">
-          {item.role}
-        </h3>
-        <p className="text-primary-400 text-sm font-medium mt-0.5">
-          {item.company}
-        </p>
-      </div>
-      <div className="text-right">
-        <p className="text-[#8b82a8] text-xs">{item.period}</p>
-        <p className="text-[#8b82a8] text-xs">{item.location}</p>
+  <div className="group bg-[#1a1425] border border-[#3d2b6b] hover:border-primary-600 transition-colors duration-200 cursor-default w-full">
+
+    {/* Always visible ─────────────────────── */}
+    <div className="p-5 pb-4">
+      <h3 className="text-[#f0edf8] font-semibold text-base leading-snug">
+        {item.role}
+      </h3>
+      <p className="text-primary-400 text-sm font-medium mt-1">
+        {item.company}
+      </p>
+      <p className="text-[#8b82a8] text-xs mt-0.5">{item.location}</p>
+
+      {/* Subtle expand hint */}
+      <div className="mt-3 flex items-center gap-1.5 opacity-40 group-hover:opacity-0 transition-opacity duration-200">
+        <div className="h-px flex-1 bg-[#3d2b6b]" />
+        <span className="text-[#8b82a8] text-[10px] tracking-widest">HOVER</span>
+        <div className="h-px flex-1 bg-[#3d2b6b]" />
       </div>
     </div>
 
-    {item.bullets && item.bullets.length > 0 && (
-      <ul className="list-none space-y-1 mb-4">
-        {item.bullets.map((bullet, i) => (
-          <li key={i} className="text-[#8b82a8] text-sm flex gap-2">
-            <span className="text-primary-600 mt-0.5 flex-shrink-0">—</span>
-            <span>{bullet}</span>
-          </li>
-        ))}
-      </ul>
-    )}
+    {/* Revealed on hover ───────────────────── */}
+    <div className="max-h-0 overflow-hidden opacity-0 group-hover:max-h-72 group-hover:opacity-100 transition-all duration-300 ease-in-out">
+      <div className="px-5 pb-5">
+        <div className="h-px bg-[#3d2b6b] mb-4" />
 
-    {item.technologies && item.technologies.length > 0 && (
-      <div className="flex flex-wrap gap-2 mt-3">
-        {item.technologies.map((tech, i) => (
-          <span
-            key={i}
-            className="text-[#f0edf8] text-xs px-2 py-0.5 bg-[#3d2b6b] border border-[#6d28d9]"
-          >
-            {tech}
-          </span>
-        ))}
+        {item.bullets && item.bullets.length > 0 && (
+          <ul className="space-y-2 mb-4">
+            {item.bullets.map((bullet, i) => (
+              <li key={i} className="text-[#8b82a8] text-sm flex gap-2 leading-snug">
+                <span className="text-primary-600 flex-shrink-0 mt-0.5">—</span>
+                <span>{bullet}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {item.technologies && item.technologies.length > 0 && (
+          <div className="flex flex-wrap gap-2">
+            {item.technologies.map((tech, i) => (
+              <span
+                key={i}
+                className="text-[#f0edf8] text-xs px-2 py-0.5 bg-[#3d2b6b] border border-[#6d28d9]"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
-    )}
+    </div>
+
   </div>
 );
 
