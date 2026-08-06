@@ -148,12 +148,7 @@ const ExperienceCard = ({ item }) => (
       </p>
       <p className="text-[#8b82a8] text-xs mt-0.5">{item.location}</p>
 
-      {/* Subtle expand hint */}
-      <div className="mt-3 flex items-center gap-1.5 opacity-40 group-hover:opacity-0 transition-opacity duration-200">
-        <div className="h-px flex-1 bg-[#3d2b6b]" />
-        <span className="text-[#8b82a8] text-[10px] tracking-widest">HOVER</span>
-        <div className="h-px flex-1 bg-[#3d2b6b]" />
-      </div>
+
     </div>
 
     {/* Revealed on hover ───────────────────── */}
