@@ -50,6 +50,25 @@ const ProjectsSection = () => {
       </div>
 
       <ul ref={ref} className="flex flex-col gap-8">
+        {/* ── Game embed ── */}
+        <li>
+          <p className="font-heading text-xs tracking-widest text-primary-500 uppercase mb-3">
+            Latest Release — Play Now
+          </p>
+          <div
+            className="border border-[#3d2b6b] overflow-hidden w-full"
+            style={{ aspectRatio: "1280 / 740" }}
+          >
+            <iframe
+              src="https://itch.io/embed-upload/18639696?color=333333"
+              frameBorder="0"
+              allowFullScreen
+              title="Sand Of Souls on itch.io"
+              className="w-full h-full"
+            />
+          </div>
+        </li>
+
         {/* Featured card — full width */}
         {featuredProject && (
           <motion.li
@@ -71,6 +90,7 @@ const ProjectsSection = () => {
             />
           </motion.li>
         )}
+
 
         {/* Grid of remaining projects */}
         {otherProjects.length > 0 && (
