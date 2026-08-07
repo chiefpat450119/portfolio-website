@@ -1,7 +1,9 @@
 "use client";
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { EXPERIENCE_DATA } from "@/constants";
+import experienceJson from "@/content/data/experience.json";
+
+const EXPERIENCE_DATA = experienceJson.experience;
 
 const ExperienceSection = () => {
   const ref = useRef(null);

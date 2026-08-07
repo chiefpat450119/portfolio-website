@@ -1,0 +1,134 @@
+{
+  "projects": [
+    {
+      "id": 0,
+      "title": "Project Starhaven",
+      "description": "A narrative-driven isometric space colony city builder. Manage resources, keep your colonists alive and happy, and weather both the elements and the demands of your overbearing boss! Led development of the game design, writing and programming for this project developed in Godot as part of UBC Game Dev Club.",
+      "image": "/images/projects/projectstarhaven.png",
+      "tag": ["All", "Game Dev", "Community"],
+      "gitUrl": "https://github.com/chiefpat450119/ProjectStarhaven",
+      "previewUrl": "https://patrickzhou45.itch.io/projectstarhaven",
+      "technologies": ["Godot", "C#", "GLSL"]
+    },
+    {
+      "id": 1,
+      "title": "ThirdEye",
+      "description": "A virtual guide dog in your pocket. ThirdEye is a voice-activated smart camera that helps visually impaired users navigate their surroundings, featuring photographic memory (literally) that allows recall with spoken queries.",
+      "image": "/images/projects/thirdeye.png",
+      "tag": ["All", "Hackathon"],
+      "gitUrl": "https://github.com/briannval/HTN-2025",
+      "previewUrl": "https://devpost.com/software/thirdeye-rdgtha",
+      "technologies": ["Raspberry Pi", "DynamoDB", "AWS Lambda", "OpenSearch", "Python", "Cohere API"]
+    },
+    {
+      "id": 8,
+      "title": "Tongue Tied Tale: GMTK 2024 Submission",
+      "description": "A story-rich 2D platformer adventure featuring a hungry chameleon, unique physics and innovative puzzles. Developed for GMTK Game Jam 2024: Built to Scale.",
+      "image": "/images/projects/tonguetiedtale.jpeg",
+      "tag": ["All", "Game Dev", "Hackathon"],
+      "gitUrl": "https://github.com/Watercooled-Grapes/GMTK-2024",
+      "previewUrl": "https://andrewyx.itch.io/tongue-tied-tale",
+      "technologies": ["Unity", "C#", "Github", "WebGL"]
+    },
+    {
+      "id": 2,
+      "title": "Fighting My Demons: HackCamp 2023 Winning Submission",
+      "description": "An innovative game that stops users from snoozing their alarms in the morning.",
+      "image": "/images/projects/fightingmydemons.png",
+      "tag": ["All", "Game Dev", "Hackathon"],
+      "gitUrl": "https://github.com/chiefpat450119/FightingMyDemons",
+      "previewUrl": "https://devpost.com/software/fighting-my-demons",
+      "technologies": ["Python", "Pygame"]
+    },
+    {
+      "id": 11,
+      "title": "Slime Succumber: UBC Game Dev Club Team 5 2024/25",
+      "description": "A mobile roguelike developed in Godot where the player is a slime monster who must survive waves of human enemies.",
+      "image": "/images/projects/ss.png",
+      "tag": ["All", "Game Dev"],
+      "gitUrl": "https://github.com/Arakruz/ubc-game-dev-team-5",
+      "previewUrl": "/",
+      "technologies": ["Godot", "C#"]
+    },
+    {
+      "id": 10,
+      "title": "CredEat",
+      "description": "A web app that helps users find healthy recipes with a one-click nutrition rating system.",
+      "image": "/images/projects/credeat.jpg",
+      "tag": ["All", "Community", "Hackathon"],
+      "gitUrl": "https://github.com/pnotato/CredEat",
+      "previewUrl": "https://devpost.com/software/credeat",
+      "technologies": ["React", "Python", "Flask"]
+    },
+    {
+      "id": 9,
+      "title": "CanDo Tennis Website",
+      "description": "A website for CanDo Tennis, a freelance tennis coaching business I co-founded.",
+      "image": "/images/projects/candotennis.png",
+      "tag": ["All", "Community"],
+      "gitUrl": "https://github.com/chiefpat450119/CandoTennis",
+      "previewUrl": "https://candotennis.com",
+      "technologies": ["Next.js", "React", "Tailwind CSS", "Typescript"]
+    },
+    {
+      "id": 5,
+      "title": "Ammonium Bot",
+      "description": "Reddit bot that helps users with common grammatical and etymological mistakes.",
+      "image": "/images/projects/ammoniumbot.png",
+      "tag": ["All", "Community"],
+      "gitUrl": "https://github.com/chiefpat450119/AmmoniumBot",
+      "previewUrl": "https://www.reddit.com/user/ammonium_bot/",
+      "technologies": ["Python", "PRAW", "Github Actions"]
+    },
+    {
+      "id": 3,
+      "title": "Loopy",
+      "description": "Maps API powered planner and rating system for Metro Vancouver transit routes.",
+      "image": "/images/projects/loopy.png",
+      "tag": ["All", "Hackathon", "Community"],
+      "gitUrl": "https://github.com/Andrewyx/Loopy",
+      "previewUrl": "https://devpost.com/software/loopy-izvt34",
+      "technologies": ["JavaScript", "HTML/CSS", "React", "Tailwind CSS", "Firebase", "Google Maps API"]
+    },
+    {
+      "id": 4,
+      "title": "Heart Disease Classifier",
+      "description": "Data science analysis using KNN classification in R to predict the presence of heart disease.",
+      "image": "/images/projects/heartdisease.png",
+      "tag": ["All", "School"],
+      "gitUrl": "https://github.com/chiefpat450119/HeartDiseaseClassifier",
+      "previewUrl": "/",
+      "technologies": ["R", "Jupyter"]
+    },
+    {
+      "id": 12,
+      "title": "Iron Insight",
+      "description": "Java desktop application for tracking strength training progress.",
+      "image": "/images/projects/ironinsight.png",
+      "tag": ["All", "School"],
+      "gitUrl": "https://github.com/chiefpat450119/IronInsight",
+      "previewUrl": "/",
+      "technologies": ["Java", "Swing"]
+    },
+    {
+      "id": 6,
+      "title": "Portfolio Tracker",
+      "description": "Personal investment tracker built with Python, Sheets API and GitHub Actions.",
+      "image": "/images/projects/portfolio.jpg",
+      "tag": ["All", "Personal"],
+      "gitUrl": "https://github.com/chiefpat450119/PortfolioTracker",
+      "previewUrl": "/",
+      "technologies": ["Python", "Google Sheets API", "Github Actions", "SMTP", "REST APIs"]
+    },
+    {
+      "id": 7,
+      "title": "SLack Off",
+      "description": "Lecture slide and audio summarizer to help you catch up on missed (or skipped) classes.",
+      "image": "/images/projects/slackoff.jpg",
+      "tag": ["All", "Hackathon"],
+      "gitUrl": "https://github.com/Andrewyx/slack-off",
+      "previewUrl": "https://devpost.com/software/slack-off",
+      "technologies": ["React", "JavaScript", "Python", "Flask", "OpenAI API", "Cohere API"]
+    }
+  ]
+}

@@ -3,7 +3,9 @@ import React, { useState, useRef } from "react";
 import ProjectCard from "./util/ProjectCard";
 import ProjectTag from "./util/ProjectTag";
 import { motion, useInView } from "framer-motion";
-import { PROJECTS_DATA } from "@/constants";
+import projectsJson from "@/content/data/projects.json";
+
+const PROJECTS_DATA = projectsJson.projects;
 
 const cardVariants = {
   initial: { y: 30, opacity: 0 },

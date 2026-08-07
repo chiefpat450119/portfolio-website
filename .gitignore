@@ -34,3 +34,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# tina cms (local build artifacts)
+/public/admin
+/tina/__generated__
