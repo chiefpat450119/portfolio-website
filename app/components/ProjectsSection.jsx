@@ -60,7 +60,7 @@ const ProjectsSection = () => {
             style={{ aspectRatio: "1280 / 740" }}
           >
             <iframe
-              src="https://itch.io/embed-upload/18639696?color=333333"
+              src="https://itch.io/embed-upload/18705654?color=333333"
               frameBorder="0"
               allowFullScreen
               title="Sand Of Souls on itch.io"
