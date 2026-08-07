@@ -7,8 +7,8 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="lg:py-16">
-      <div className="grid grid-cols-1 sm:grid-cols-12 items-center">
+    <section className="lg:py-16 px-4 xl:px-16">
+      <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-8">
         {/* Text content */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -68,20 +68,31 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="col-span-4 place-self-center mt-10 lg:mt-0"
+          className="col-span-4 place-self-center mt-0 hidden lg:block"
         >
-          <div className="relative w-[200px] h-[200px] md:w-[260px] md:h-[260px] xl:w-[340px] xl:h-[340px]">
-            {/* Outer square border frame — geometric, no glow */}
-            <div className="absolute inset-0 border-2 border-primary-600 rounded-sm" />
-            {/* Inner offset border for depth */}
-            <div className="absolute inset-[8px] border border-[#3d2b6b] rounded-sm" />
-            <Image
-              src="/images/pfp.jpg"
-              alt="Patrick Zhou"
-              className="absolute inset-[10px] object-cover"
-              fill
-              sizes="(max-width: 768px) 200px, (max-width: 1280px) 260px, 340px"
-            />
+          <div className="relative w-[280px] h-[280px] xl:w-[340px] xl:h-[340px]">
+            {/* Faint full outline */}
+            <div className="absolute inset-0 border border-[#3d2b6b]" />
+
+            {/* Corner brackets — top-left */}
+            <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-primary-500" />
+            {/* top-right */}
+            <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-primary-500" />
+            {/* bottom-left */}
+            <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-primary-500" />
+            {/* bottom-right */}
+            <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-primary-500" />
+
+            {/* Photo — inset so brackets clearly overlap the edge */}
+            <div className="absolute inset-3 overflow-hidden">
+              <Image
+                src="/images/pfp.jpg"
+                alt="Patrick Zhou"
+                className="object-cover"
+                fill
+                sizes="(max-width: 1280px) 280px, 340px"
+              />
+            </div>
           </div>
         </motion.div>
       </div>

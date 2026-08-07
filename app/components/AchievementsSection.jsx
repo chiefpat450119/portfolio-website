@@ -34,7 +34,7 @@ const AchievementsSection = () => {
   return (
     <div className="py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
       {/* Stats row */}
-      <div className="bg-[#1a1425] border border-[#3d2b6b] py-6 px-8 mx-2 sm:mx-12 flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-0">
+      <div className="bg-[#1a1425] border border-[#3d2b6b] py-6 px-8 mx-2 sm:mx-12 flex flex-col sm:flex-row items-center justify-evenly gap-6 sm:gap-0">
         {achievementsList.map((achievement, index) => (
           <div
             key={index}
