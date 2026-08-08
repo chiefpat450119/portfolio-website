@@ -65,7 +65,7 @@ const AchievementsSection = () => {
 
       {/* GitHub calendar */}
       <div className="bg-gray-900 border border-blue-900 flex flex-col gap-3 justify-center items-center px-6 mt-4 md:mx-12 md:mt-6 py-6 md:py-8">
-        <p className="font-heading text-xs tracking-widest text-slate-400 uppercase">
+        <p className="font-heading text-base tracking-widest text-slate-400 uppercase">
           Activity Log
         </p>
         <GitHubCalendar

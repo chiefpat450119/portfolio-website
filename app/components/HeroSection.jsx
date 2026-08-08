@@ -23,10 +23,10 @@ const HeroSection = () => {
           transition={{ duration: 0.6 }}
           className="col-span-8 place-self-center sm:text-left justify-self-start"
         >
-          <h1 className="text-slate-200 mb-4 text-4xl sm:text-5xl lg:text-7xl lg:leading-tight font-heading font-extrabold tracking-tight">
+          <h1 className="text-slate-200 mb-4 text-5xl sm:text-7xl lg:text-8xl lg:leading-tight font-heading font-extrabold tracking-tight">
             Hi, I&apos;m {heroData.name}
           </h1>
-          <div className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-primary-500 mb-6 min-h-[1.5em]">
+          <div className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-primary-500 mb-6 min-h-[1.5em]">
             <TypeAnimation
               sequence={sequence}
               wrapper="span"

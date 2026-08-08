@@ -38,7 +38,7 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects" className="py-12 px-4 xl:px-16">
-      <h2 className="font-heading text-3xl font-bold text-slate-200 tracking-tight mb-8">
+      <h2 className="font-heading text-5xl font-bold text-slate-200 tracking-tight mb-8">
         Projects
       </h2>
 
@@ -93,7 +93,7 @@ const ProjectsSection = () => {
                       {/* CSS Triangle Play Icon */}
                       <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[16px] border-l-slate-200 border-b-[10px] border-b-transparent ml-1" />
                     </div>
-                    <span className="text-primary-400 font-heading tracking-widest uppercase text-sm group-hover/btn:text-slate-200 transition-colors drop-shadow-md font-semibold">
+                    <span className="text-primary-400 font-heading tracking-widest uppercase text-lg group-hover/btn:text-slate-200 transition-colors drop-shadow-md font-semibold">
                       Click to Load Game
                     </span>
                   </div>
@@ -113,7 +113,7 @@ const ProjectsSection = () => {
             <div className="p-5 flex flex-col justify-between flex-1">
               <div className="flex justify-between items-start mb-2">
                 <div>
-                  <span className="font-heading text-xs tracking-widest text-primary-500 uppercase mb-3 block">
+                  <span className="font-heading text-base tracking-widest text-primary-500 uppercase mb-3 block">
                     Latest Release — Play Now
                   </span>
                   <h5 className="font-semibold text-slate-200 text-base leading-snug">

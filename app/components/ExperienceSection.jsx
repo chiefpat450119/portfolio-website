@@ -11,7 +11,7 @@ const ExperienceSection = () => {
 
   return (
     <section id="experience" className="py-12 px-4 xl:px-16">
-      <h2 className="font-heading text-3xl font-bold text-slate-200 tracking-tight mb-16">
+      <h2 className="font-heading text-5xl font-bold text-slate-200 tracking-tight mb-16">
         Experience
       </h2>
 
@@ -93,7 +93,7 @@ const ExperienceSection = () => {
                     transition={{ duration: 0.4, delay: index * 0.12 }}
                     className="pl-12 mb-2"
                   >
-                    <span className="font-heading text-[10px] tracking-widest text-slate-400 uppercase">
+                    <span className="font-heading text-sm tracking-widest text-slate-400 uppercase">
                       {item.period}
                     </span>
                   </motion.div>
@@ -124,11 +124,11 @@ const ExperienceSection = () => {
 
 // ── Date label shown on the spine ────────────────────────────────────────────
 const DateLabel = ({ period, alignRight = false }) => (
-  <div className={`flex flex-col gap-0.5 ${alignRight ? "items-end" : "items-start"}`}>
+  <div className="flex flex-col text-left mb-3">
     {period.split("–").map((part, i) => (
       <span
         key={i}
-        className="font-heading text-[10px] tracking-widest text-slate-400 uppercase leading-tight"
+        className="font-heading text-sm tracking-widest text-slate-400 uppercase leading-tight"
       >
         {part.trim()}
       </span>

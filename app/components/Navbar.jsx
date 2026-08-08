@@ -21,7 +21,7 @@ const Navbar = () => {
         {/* Logo / name */}
         <Link
           href="/"
-          className="font-heading text-slate-200 text-sm tracking-widest hover:text-indigo-400 transition-colors duration-150"
+          className="font-bold text-slate-200 text-lg tracking-widest hover:text-indigo-400 transition-colors duration-150"
         >
           PATRICK ZHOU
         </Link>

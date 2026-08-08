@@ -51,7 +51,7 @@ const EmailSection = () => {
         transition={{ duration: 0.5 }}
         className="z-10"
       >
-        <h2 className="font-heading text-3xl font-bold text-slate-200 tracking-tight mb-4">
+        <h2 className="font-heading text-5xl font-bold text-slate-200 tracking-tight mb-4">
           Get in Touch
         </h2>
         <p className="text-slate-400 mb-6 max-w-md leading-relaxed text-sm">

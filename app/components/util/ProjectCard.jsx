@@ -55,7 +55,7 @@ const ProjectCard = ({
       {/* Content */}
       <div className="p-5 flex flex-col justify-between flex-1">
         {featured && (
-          <span className="font-heading text-xs tracking-widest text-primary-500 uppercase mb-3">
+          <span className="font-heading text-base tracking-widest text-primary-500 uppercase mb-3">
             Featured Project
           </span>
         )}

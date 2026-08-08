@@ -29,8 +29,8 @@ const SkillChip = ({ name, icon, delay, isInView }) => (
 );
 
 const SkillGroup = ({ label, skills, baseDelay, isInView }) => (
-  <div className="flex-1 min-w-0">
-    <p className="font-heading text-[10px] tracking-widest text-primary-500 uppercase mb-4">
+  <div className="flex flex-col items-start gap-1">
+    <p className="font-heading text-sm tracking-widest text-primary-500 uppercase mb-4">
       {label}
     </p>
     <div className="flex flex-wrap gap-3">
@@ -56,7 +56,7 @@ const AboutSection = () => {
   return (
     <section className="text-slate-200 py-12 px-4 xl:px-16" id="about">
       {/* ── Section heading ── */}
-      <h2 className="font-heading text-3xl font-bold text-slate-200 tracking-tight mb-8">
+      <h2 className="font-heading text-5xl font-bold text-slate-200 tracking-tight mb-8">
         About
       </h2>
 
