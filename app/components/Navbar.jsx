@@ -16,16 +16,8 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-950 border-b border-slate-800">
-      <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-6 py-3">
-        {/* Logo / name */}
-        <Link
-          href="/"
-          className="font-bold text-slate-200 text-lg tracking-widest hover:text-indigo-400 transition-colors duration-150"
-        >
-          PATRICK ZHOU
-        </Link>
-
+    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 bg-gray-950 border-2 border-blue-900 shadow-[0_0_15px_rgba(30,58,138,0.5)]">
+      <div className="flex items-center justify-center px-6 py-3">
         {/* Mobile toggle */}
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
@@ -49,7 +41,7 @@ const Navbar = () => {
 
         {/* Desktop nav */}
         <div className="menu hidden md:block">
-          <ul className="flex p-0 md:flex-row md:space-x-8">
+          <ul className="flex p-0 flex-row space-x-6 md:space-x-8">
             {navLinks.map((link, index) => (
               <li key={index}>
                 <NavLink href={link.path} title={link.title} />
