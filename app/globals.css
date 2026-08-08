@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --bg-primary: #0d0a14;
-  --bg-surface: #1a1425;
-  --border-muted: #3d2b6b;
-  --text-primary: #f0edf8;
-  --text-muted: #8b82a8;
-  --violet-accent: #8b5cf6;
-  --violet-dark: #6d28d9;
-  --amber-accent: #d97706;
+  --bg-primary: #0a0c10;
+  --bg-surface: #111827;
+  --border-muted: #1e3a8a;
+  --text-primary: #e2e8f0;
+  --text-muted: #94a3b8;
+  --blue-accent: #3b82f6;
+  --blue-dark: #1e40af;
+  --green-accent: #22c55e;
 }
 
 * {
@@ -24,7 +24,7 @@ html {
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  font-family: var(--font-inter), sans-serif;
+  font-family: var(--font-space-mono), monospace;
 }
 
 /* Starfield canvas — sits behind all content */
@@ -54,9 +54,9 @@ main > * {
     border-color: var(--border-muted);
   }
 
-  /* Orbitron heading utility */
+  /* VT323 heading utility */
   .font-heading {
-    font-family: var(--font-orbitron), sans-serif;
+    font-family: var(--font-vt323), monospace;
     letter-spacing: 0.05em;
   }
 
@@ -66,8 +66,8 @@ main > * {
     border: 1px solid var(--border-muted);
   }
 
-  /* Violet underline indicator for active tabs */
+  /* Blue underline indicator for active tabs */
   .tab-active-bar {
-    background-color: var(--violet-accent);
+    background-color: var(--blue-accent);
   }
 }

@@ -38,12 +38,12 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects" className="py-12 px-4 xl:px-16">
-      <h2 className="font-heading text-3xl font-bold text-[#f0edf8] tracking-tight mb-8">
+      <h2 className="font-heading text-3xl font-bold text-slate-200 tracking-tight mb-8">
         Projects
       </h2>
 
       {/* Filter tags */}
-      <div className="text-[#f0edf8] flex flex-wrap gap-2 py-4 mb-6">
+      <div className="text-slate-200 flex flex-wrap gap-2 py-4 mb-6">
         {["All", "Game Dev", "Hackathon", "Personal", "Community", "School"].map(
           (name) => (
             <ProjectTag
@@ -65,9 +65,9 @@ const ProjectsSection = () => {
             animate={isInView ? "animate" : "initial"}
             transition={{ duration: 0.4 }}
         >
-          <div className="group bg-[#1a1425] border border-[#3d2b6b] hover:border-primary-600 transition-all duration-200 hover:-translate-y-1 flex flex-col">
+          <div className="group bg-gray-900 border border-blue-900 hover:border-primary-600 transition-all duration-200 hover:-translate-y-1 flex flex-col">
             <div
-              className="border-b border-[#3d2b6b] overflow-hidden w-full relative bg-[#0d0a14]"
+              className="border-b border-blue-900 overflow-hidden w-full relative bg-gray-950"
               style={{ aspectRatio: "1280 / 740" }}
             >
               {!isGameLoaded ? (
@@ -85,15 +85,15 @@ const ProjectsSection = () => {
                   />
                   
                   {/* Dark overlay so the play button stays visible */}
-                  <div className="absolute inset-0 bg-[#1a1425]/60 group-hover/btn:bg-[#1a1425]/40 transition-colors duration-300" />
+                  <div className="absolute inset-0 bg-gray-900/60 group-hover/btn:bg-gray-900/40 transition-colors duration-300" />
                   
                   {/* Play Button UI */}
                   <div className="relative z-10 flex flex-col items-center justify-center">
-                    <div className="w-16 h-16 rounded-full border-2 border-primary-500 flex items-center justify-center mb-4 group-hover/btn:scale-110 transition-transform bg-[#3d2b6b]/90 backdrop-blur-sm shadow-lg">
+                    <div className="w-16 h-16 rounded-full border-2 border-primary-500 flex items-center justify-center mb-4 group-hover/btn:scale-110 transition-transform bg-blue-900/90 backdrop-blur-sm shadow-lg">
                       {/* CSS Triangle Play Icon */}
-                      <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[16px] border-l-[#f0edf8] border-b-[10px] border-b-transparent ml-1" />
+                      <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[16px] border-l-slate-200 border-b-[10px] border-b-transparent ml-1" />
                     </div>
-                    <span className="text-primary-400 font-heading tracking-widest uppercase text-sm group-hover/btn:text-[#f0edf8] transition-colors drop-shadow-md font-semibold">
+                    <span className="text-primary-400 font-heading tracking-widest uppercase text-sm group-hover/btn:text-slate-200 transition-colors drop-shadow-md font-semibold">
                       Click to Load Game
                     </span>
                   </div>
@@ -116,7 +116,7 @@ const ProjectsSection = () => {
                   <span className="font-heading text-xs tracking-widest text-primary-500 uppercase mb-3 block">
                     Latest Release — Play Now
                   </span>
-                  <h5 className="font-semibold text-[#f0edf8] text-base leading-snug">
+                  <h5 className="font-semibold text-slate-200 text-base leading-snug">
                     {gameEmbedData.title}
                   </h5>
                 </div>
@@ -125,32 +125,32 @@ const ProjectsSection = () => {
                     <Link
                       href={gameEmbedData.gitUrl} 
                       aria-label="View source code"
-                      className="border border-[#3d2b6b] hover:border-primary-400 p-2 transition-colors duration-150 bg-[#0d0a14]"
+                      className="border border-blue-900 hover:border-primary-400 p-2 transition-colors duration-150 bg-gray-950"
                       target="_blank"
                     >
-                      <CodeBracketIcon className="h-5 w-5 text-[#8b82a8] hover:text-primary-400 transition-colors duration-150" />
+                      <CodeBracketIcon className="h-5 w-5 text-slate-400 hover:text-primary-400 transition-colors duration-150" />
                     </Link>
                   )}
                   {gameEmbedData.previewUrl && (
                     <Link
                       href={gameEmbedData.previewUrl}
                       aria-label="View live preview"
-                      className="border border-[#3d2b6b] hover:border-primary-400 p-2 transition-colors duration-150 bg-[#0d0a14]"
+                      className="border border-blue-900 hover:border-primary-400 p-2 transition-colors duration-150 bg-gray-950"
                       target="_blank"
                     >
-                      <EyeIcon className="h-5 w-5 text-[#8b82a8] hover:text-primary-400 transition-colors duration-150" />
+                      <EyeIcon className="h-5 w-5 text-slate-400 hover:text-primary-400 transition-colors duration-150" />
                     </Link>
                   )}
                 </div>
               </div>
-              <p className="text-[#8b82a8] text-sm leading-relaxed flex-1 mt-2">
+              <p className="text-slate-400 text-sm leading-relaxed flex-1 mt-2">
                 {gameEmbedData.description}
               </p>
               <div className="flex flex-wrap gap-2 mt-4">
                 {gameEmbedData.technologies?.map((tech, index) => (
                   <span
                     key={index}
-                    className="text-[#f0edf8] text-xs px-2 py-0.5 bg-[#3d2b6b] border border-[#6d28d9]"
+                    className="text-slate-200 text-xs px-2 py-0.5 bg-blue-900 border border-blue-800"
                   >
                     {tech}
                   </span>

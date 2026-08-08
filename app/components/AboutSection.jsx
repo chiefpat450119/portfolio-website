@@ -8,10 +8,10 @@ const BioCard = ({ heading, text, delay, isInView }) => (
   <motion.div
     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
     transition={{ duration: 0.55, delay }}
-    className="bg-[#1a1425] border border-[#3d2b6b] border-l-[3px] border-l-primary-500 p-5 flex flex-col gap-2"
+    className="bg-gray-900 border border-blue-900 border-l-[3px] border-l-primary-500 p-5 flex flex-col gap-2"
   >
-    <h3 className="text-[#f0edf8] font-semibold text-base">{heading}</h3>
-    <p className="text-[#8b82a8] text-sm leading-relaxed">{text}</p>
+    <h3 className="text-slate-200 font-semibold text-base">{heading}</h3>
+    <p className="text-slate-400 text-sm leading-relaxed">{text}</p>
   </motion.div>
 );
 
@@ -19,10 +19,10 @@ const SkillChip = ({ name, icon, delay, isInView }) => (
   <motion.div
     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
     transition={{ duration: 0.4, delay }}
-    className="flex flex-col items-center justify-center gap-2 p-3 bg-[#1a1425] border border-[#3d2b6b] hover:border-primary-500 hover:-translate-y-0.5 transition-all duration-150 cursor-default w-[88px]"
+    className="flex flex-col items-center justify-center gap-2 p-3 bg-gray-900 border border-blue-900 hover:border-primary-500 hover:-translate-y-0.5 transition-all duration-150 cursor-default w-[88px]"
   >
     <i className={`${icon} text-4xl`} aria-hidden="true" />
-    <span className="text-[#f0edf8] text-[11px] text-center leading-tight">
+    <span className="text-slate-200 text-[11px] text-center leading-tight">
       {name}
     </span>
   </motion.div>
@@ -54,9 +54,9 @@ const AboutSection = () => {
   const isSkillsInView = useInView(skillsRef, { amount: 0.2, once: true });
 
   return (
-    <section className="text-[#f0edf8] py-12 px-4 xl:px-16" id="about">
+    <section className="text-slate-200 py-12 px-4 xl:px-16" id="about">
       {/* ── Section heading ── */}
-      <h2 className="font-heading text-3xl font-bold text-[#f0edf8] tracking-tight mb-8">
+      <h2 className="font-heading text-3xl font-bold text-slate-200 tracking-tight mb-8">
         About
       </h2>
 
@@ -85,7 +85,7 @@ const AboutSection = () => {
 
           {/* Divider */}
           <div
-            className="hidden sm:block w-px bg-[#3d2b6b] mx-8 self-stretch"
+            className="hidden sm:block w-px bg-blue-900 mx-8 self-stretch"
             aria-hidden="true"
           />
 

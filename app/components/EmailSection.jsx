@@ -38,7 +38,7 @@ const EmailSection = () => {
   };
 
   const inputClass =
-    "bg-[#0d0a14] border border-[#3d2b6b] text-[#f0edf8] placeholder-[#8b82a8] text-sm block w-full px-3 py-2.5 focus:outline-none focus:border-primary-500 transition-colors duration-150";
+    "bg-gray-900 border border-slate-800 text-slate-200 placeholder-slate-400 text-sm block w-full px-3 py-2.5 focus:outline-none focus:border-primary-500 transition-colors duration-150";
 
   return (
     <section
@@ -51,10 +51,10 @@ const EmailSection = () => {
         transition={{ duration: 0.5 }}
         className="z-10"
       >
-        <h2 className="font-heading text-3xl font-bold text-[#f0edf8] tracking-tight mb-4">
+        <h2 className="font-heading text-3xl font-bold text-slate-200 tracking-tight mb-4">
           Get in Touch
         </h2>
-        <p className="text-[#8b82a8] mb-6 max-w-md leading-relaxed text-sm">
+        <p className="text-slate-400 mb-6 max-w-md leading-relaxed text-sm">
           I&apos;m always open to new opportunities and collaborations. Whether
           you have questions, want to discuss a project, or just want to debate
           who the greatest tennis player of all time is — don&apos;t hesitate to
@@ -65,7 +65,7 @@ const EmailSection = () => {
             href="https://www.github.com/chiefpat450119"
             target="_blank"
             aria-label="GitHub"
-            className="border border-[#3d2b6b] p-2 hover:border-primary-500 transition-colors duration-150"
+            className="border border-blue-900 p-2 hover:border-primary-500 transition-colors duration-150"
           >
             <Image src={GithubIcon} alt="GitHub" width={28} height={28} />
           </Link>
@@ -73,7 +73,7 @@ const EmailSection = () => {
             href="https://www.linkedin.com/in/patrickzhou04"
             target="_blank"
             aria-label="LinkedIn"
-            className="border border-[#3d2b6b] p-2 hover:border-primary-500 transition-colors duration-150"
+            className="border border-blue-900 p-2 hover:border-primary-500 transition-colors duration-150"
           >
             <Image src={LinkedInIcon} alt="LinkedIn" width={28} height={28} />
           </Link>
@@ -87,7 +87,7 @@ const EmailSection = () => {
         onSubmit={handleSubmit}
       >
         <div>
-          <label htmlFor="email" className="text-[#8b82a8] block mb-1.5 text-xs font-medium uppercase tracking-wider">
+          <label htmlFor="email" className="text-slate-400 block mb-1.5 text-xs font-medium uppercase tracking-wider">
             Your Email
           </label>
           <input
@@ -100,7 +100,7 @@ const EmailSection = () => {
           />
         </div>
         <div>
-          <label htmlFor="subject" className="text-[#8b82a8] block mb-1.5 text-xs font-medium uppercase tracking-wider">
+          <label htmlFor="subject" className="text-slate-400 block mb-1.5 text-xs font-medium uppercase tracking-wider">
             Subject
           </label>
           <input
@@ -113,7 +113,7 @@ const EmailSection = () => {
           />
         </div>
         <div>
-          <label htmlFor="message" className="text-[#8b82a8] block mb-1.5 text-xs font-medium uppercase tracking-wider">
+          <label htmlFor="message" className="text-slate-400 block mb-1.5 text-xs font-medium uppercase tracking-wider">
             Message
           </label>
           <textarea

@@ -1,15 +1,17 @@
-import { Inter, Orbitron } from "next/font/google";
+import { Space_Mono, VT323 } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const spaceMono = Space_Mono({
+  weight: ["400", "700"],
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-space-mono",
   display: "swap",
 });
 
-const orbitron = Orbitron({
+const vt323 = VT323({
+  weight: "400",
   subsets: ["latin"],
-  variable: "--font-orbitron",
+  variable: "--font-vt323",
   display: "swap",
 });
 
@@ -28,7 +30,7 @@ export default function RootLayout({ children }) {
           href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
         />
       </head>
-      <body className={`${inter.variable} ${orbitron.variable} font-inter`}>
+      <body className={`${spaceMono.variable} ${vt323.variable} font-body bg-[#0a0c10] text-[#e2e8f0]`}>
         {children}
       </body>
     </html>

@@ -23,7 +23,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6 }}
           className="col-span-8 place-self-center sm:text-left justify-self-start"
         >
-          <h1 className="text-[#f0edf8] mb-4 text-4xl sm:text-5xl lg:text-7xl lg:leading-tight font-heading font-extrabold tracking-tight">
+          <h1 className="text-slate-200 mb-4 text-4xl sm:text-5xl lg:text-7xl lg:leading-tight font-heading font-extrabold tracking-tight">
             Hi, I&apos;m {heroData.name}
           </h1>
           <div className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-primary-500 mb-6 min-h-[1.5em]">
@@ -34,7 +34,7 @@ const HeroSection = () => {
               repeat={Infinity}
             />
           </div>
-          <p className="text-[#8b82a8] text-base lg:text-lg mb-8 max-w-xl leading-relaxed">
+          <p className="text-slate-400 text-base lg:text-lg mb-8 max-w-xl leading-relaxed">
             {heroData.bio}
           </p>
           <div className="flex flex-wrap gap-4">
@@ -64,7 +64,7 @@ const HeroSection = () => {
         >
           <div className="relative w-[280px] h-[280px] xl:w-[340px] xl:h-[340px]">
             {/* Faint full outline */}
-            <div className="absolute inset-0 border border-[#3d2b6b]" />
+            <div className="absolute inset-0 border border-blue-900" />
 
             {/* Corner brackets — top-left */}
             <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-primary-500" />

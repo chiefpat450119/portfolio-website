@@ -11,19 +11,19 @@ const ExperienceSection = () => {
 
   return (
     <section id="experience" className="py-12 px-4 xl:px-16">
-      <h2 className="font-heading text-3xl font-bold text-[#f0edf8] tracking-tight mb-16">
+      <h2 className="font-heading text-3xl font-bold text-slate-200 tracking-tight mb-16">
         Experience
       </h2>
 
       <div ref={ref} className="relative">
         {/* ── Desktop spine ── */}
         <div
-          className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-[#3d2b6b]"
+          className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-blue-900"
           aria-hidden="true"
         />
         {/* ── Mobile spine ── */}
         <div
-          className="block md:hidden absolute left-5 top-0 bottom-0 w-px bg-[#3d2b6b]"
+          className="block md:hidden absolute left-5 top-0 bottom-0 w-px bg-blue-900"
           aria-hidden="true"
         />
 
@@ -93,7 +93,7 @@ const ExperienceSection = () => {
                     transition={{ duration: 0.4, delay: index * 0.12 }}
                     className="pl-12 mb-2"
                   >
-                    <span className="font-heading text-[10px] tracking-widest text-[#8b82a8] uppercase">
+                    <span className="font-heading text-[10px] tracking-widest text-slate-400 uppercase">
                       {item.period}
                     </span>
                   </motion.div>
@@ -128,7 +128,7 @@ const DateLabel = ({ period, alignRight = false }) => (
     {period.split("–").map((part, i) => (
       <span
         key={i}
-        className="font-heading text-[10px] tracking-widest text-[#8b82a8] uppercase leading-tight"
+        className="font-heading text-[10px] tracking-widest text-slate-400 uppercase leading-tight"
       >
         {part.trim()}
       </span>
@@ -138,17 +138,17 @@ const DateLabel = ({ period, alignRight = false }) => (
 
 // ── Card: collapsed by default, reveals details on hover ─────────────────────
 const ExperienceCard = ({ item }) => (
-  <div className="group bg-[#1a1425] border border-[#3d2b6b] hover:border-primary-600 transition-colors duration-200 cursor-default w-full">
+  <div className="group bg-gray-900 border border-blue-900 hover:border-primary-600 transition-colors duration-200 cursor-default w-full">
 
     {/* Always visible ─────────────────────── */}
     <div className="p-5 pb-4">
-      <h3 className="text-[#f0edf8] font-semibold text-base leading-snug">
+      <h3 className="text-slate-200 font-semibold text-base leading-snug">
         {item.role}
       </h3>
       <p className="text-primary-400 text-sm font-medium mt-1">
         {item.company}
       </p>
-      <p className="text-[#8b82a8] text-xs mt-0.5">{item.location}</p>
+      <p className="text-slate-400 text-xs mt-0.5">{item.location}</p>
 
 
     </div>
@@ -156,12 +156,12 @@ const ExperienceCard = ({ item }) => (
     {/* Revealed on hover ───────────────────── */}
     <div className="max-h-0 overflow-hidden opacity-0 group-hover:max-h-72 group-hover:opacity-100 transition-all duration-300 ease-in-out">
       <div className="px-5 pb-5">
-        <div className="h-px bg-[#3d2b6b] mb-4" />
+        <div className="h-px bg-blue-900 mb-4" />
 
         {item.bullets && item.bullets.length > 0 && (
           <ul className="space-y-2 mb-4">
             {item.bullets.map((bullet, i) => (
-              <li key={i} className="text-[#8b82a8] text-sm flex gap-2 leading-snug">
+              <li key={i} className="text-slate-400 text-sm flex gap-2 leading-snug">
                 <span className="text-primary-600 flex-shrink-0 mt-0.5">—</span>
                 <span>{bullet}</span>
               </li>
@@ -174,7 +174,7 @@ const ExperienceCard = ({ item }) => (
             {item.technologies.map((tech, i) => (
               <span
                 key={i}
-                className="text-[#f0edf8] text-xs px-2 py-0.5 bg-[#3d2b6b] border border-[#6d28d9]"
+                className="text-slate-200 text-xs px-2 py-0.5 bg-blue-900 border border-blue-800"
               >
                 {tech}
               </span>
