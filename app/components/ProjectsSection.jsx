@@ -17,6 +17,7 @@ const FEATURED_ID = 0; // Project Starhaven
 
 const ProjectsSection = () => {
   const [tag, setTag] = useState("All");
+  const [isGameLoaded, setIsGameLoaded] = useState(false);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, amount: 0.05 });
 
@@ -58,16 +59,32 @@ const ProjectsSection = () => {
             Latest Release — Play Now
           </p>
           <div
-            className="border border-[#3d2b6b] overflow-hidden w-full"
+            className="border border-[#3d2b6b] overflow-hidden w-full relative"
             style={{ aspectRatio: "1280 / 740" }}
           >
-            <iframe
-              src="https://itch.io/embed-upload/18705654?color=333333"
-              frameBorder="0"
-              allowFullScreen
-              title="Sand Of Souls on itch.io"
-              className="w-full h-full"
-            />
+            {!isGameLoaded ? (
+              <button
+                onClick={() => setIsGameLoaded(true)}
+                className="absolute inset-0 w-full h-full bg-[#1a1425] flex flex-col items-center justify-center group hover:bg-[#251c35] transition-colors"
+                aria-label="Load Sand of Souls"
+              >
+                <div className="w-16 h-16 rounded-full border-2 border-primary-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform bg-[#3d2b6b]">
+                  {/* CSS Triangle Play Icon */}
+                  <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[16px] border-l-[#f0edf8] border-b-[10px] border-b-transparent ml-1" />
+                </div>
+                <span className="text-primary-500 font-heading tracking-widest uppercase text-sm group-hover:text-[#f0edf8] transition-colors">
+                  Click to Load Game
+                </span>
+              </button>
+            ) : (
+              <iframe
+                src="https://itch.io/embed-upload/18705654?color=333333"
+                frameBorder="0"
+                allowFullScreen
+                title="Sand Of Souls on itch.io"
+                className="w-full h-full"
+              />
+            )}
           </div>
         </li>
 
