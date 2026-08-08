@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useRef } from "react";
+import Image from "next/image";
 import ProjectCard from "./util/ProjectCard";
 import ProjectTag from "./util/ProjectTag";
 import { motion, useInView } from "framer-motion";
@@ -65,16 +66,30 @@ const ProjectsSection = () => {
             {!isGameLoaded ? (
               <button
                 onClick={() => setIsGameLoaded(true)}
-                className="absolute inset-0 w-full h-full bg-[#1a1425] flex flex-col items-center justify-center group hover:bg-[#251c35] transition-colors"
+                className="absolute inset-0 w-full h-full flex flex-col items-center justify-center group"
                 aria-label="Load Sand of Souls"
               >
-                <div className="w-16 h-16 rounded-full border-2 border-primary-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform bg-[#3d2b6b]">
-                  {/* CSS Triangle Play Icon */}
-                  <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[16px] border-l-[#f0edf8] border-b-[10px] border-b-transparent ml-1" />
+                {/* Background Image */}
+                <Image
+                  src="/images/game/sandofsouls_thumbnail.png"
+                  alt="Sand of Souls Thumbnail"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                
+                {/* Dark overlay so the play button stays visible */}
+                <div className="absolute inset-0 bg-[#1a1425]/60 group-hover:bg-[#1a1425]/40 transition-colors duration-300" />
+                
+                {/* Play Button UI */}
+                <div className="relative z-10 flex flex-col items-center justify-center">
+                  <div className="w-16 h-16 rounded-full border-2 border-primary-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform bg-[#3d2b6b]/90 backdrop-blur-sm shadow-lg">
+                    {/* CSS Triangle Play Icon */}
+                    <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[16px] border-l-[#f0edf8] border-b-[10px] border-b-transparent ml-1" />
+                  </div>
+                  <span className="text-primary-400 font-heading tracking-widest uppercase text-sm group-hover:text-[#f0edf8] transition-colors drop-shadow-md font-semibold">
+                    Click to Load Game
+                  </span>
                 </div>
-                <span className="text-primary-500 font-heading tracking-widest uppercase text-sm group-hover:text-[#f0edf8] transition-colors">
-                  Click to Load Game
-                </span>
               </button>
             ) : (
               <iframe
