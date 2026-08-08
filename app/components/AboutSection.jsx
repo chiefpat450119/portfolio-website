@@ -1,44 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-
-// ── Bio content ──────────────────────────────────────────────────────────────
-const BIO_SECTIONS = [
-  {
-    id: "deployed",
-    heading: "Currently Deployed",
-    text: "4th year CS student at UBC. Currently interning at Shopify in Toronto. Active game developer at UBC Game Dev Club, where I lead design and programming on Project Starhaven — a narrative-driven isometric space colony builder.",
-  },
-  {
-    id: "build",
-    heading: "What I Build",
-    text: "My main obsession is game development — primarily in Godot and Unity, building narrative-driven games at the intersection of sci-fi world-building and systems design. I also love scripting and automation: if it can be automated, it will be.",
-  },
-  {
-    id: "rest",
-    heading: "Rest States",
-    text: "Competitive tennis player and co-founder of CanDo Tennis. Avid sci-fi reader — Asimov, Liu Cixin, Vernor Vinge. I follow space exploration news obsessively and hit the gym most days.",
-  },
-];
-
-// ── Skills content ────────────────────────────────────────────────────────────
-const LANGUAGES = [
-  { name: "Python",     icon: "devicon-python-plain colored" },
-  { name: "Kotlin",     icon: "devicon-kotlin-plain colored" },
-  { name: "JavaScript", icon: "devicon-javascript-plain colored" },
-  { name: "C#",         icon: "devicon-csharp-plain colored" },
-  { name: "Java",       icon: "devicon-java-plain colored" },
-  { name: "R",          icon: "devicon-r-plain colored" },
-];
-
-const TOOLS = [
-  { name: "Godot",    icon: "devicon-godot-plain colored" },
-  { name: "Unity",    icon: "devicon-unity-plain" },
-  { name: "React",    icon: "devicon-react-original colored" },
-  { name: "Next.js",  icon: "devicon-nextjs-plain" },
-  { name: "GitHub",   icon: "devicon-github-original" },
-  { name: "Tailwind", icon: "devicon-tailwindcss-plain colored" },
-];
+import aboutData from "@/content/data/about.json";
 
 // ── Sub-components ────────────────────────────────────────────────────────────
 const BioCard = ({ heading, text, delay, isInView }) => (
@@ -98,13 +61,10 @@ const AboutSection = () => {
       </h2>
 
       {/* ── Bio cards row ── */}
-      <div
-        ref={bioRef}
-        className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12"
-      >
-        {BIO_SECTIONS.map((section, i) => (
+      <div ref={bioRef} className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+        {aboutData.bioSections.map((section, i) => (
           <BioCard
-            key={section.id}
+            key={section.heading}
             heading={section.heading}
             text={section.text}
             delay={i * 0.12}
@@ -118,17 +78,20 @@ const AboutSection = () => {
         <div className="flex flex-col sm:flex-row gap-8 sm:gap-0">
           <SkillGroup
             label="Languages"
-            skills={LANGUAGES}
+            skills={aboutData.languages}
             baseDelay={0}
             isInView={isSkillsInView}
           />
 
           {/* Divider */}
-          <div className="hidden sm:block w-px bg-[#3d2b6b] mx-8 self-stretch" aria-hidden="true" />
+          <div
+            className="hidden sm:block w-px bg-[#3d2b6b] mx-8 self-stretch"
+            aria-hidden="true"
+          />
 
           <SkillGroup
             label="Tools & Frameworks"
-            skills={TOOLS}
+            skills={aboutData.tools}
             baseDelay={0.1}
             isInView={isSkillsInView}
           />

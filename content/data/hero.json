@@ -1,0 +1,19 @@
+{
+  "name": "Patrick",
+  "bio": "Fourth year computer science student at the University of British Columbia with an intense passion for learning, creating, and problem-solving. Whether it's at a hackathon, on the tennis court, or in the depths of a sci-fi universe — I'm always building something.",
+  "typeAnimationSequences": [
+    { "text": "game developer", "pause": 1200 },
+    { "text": "sci-fi enthusiast", "pause": 1200 },
+    { "text": "explorer of galaxies", "pause": 1200 },
+    { "text": "tennis player", "pause": 1200 },
+    { "text": "space colony builder", "pause": 1400 }
+  ],
+  "ctaPrimary": {
+    "label": "Contact Me",
+    "href": "/#contact"
+  },
+  "ctaSecondary": {
+    "label": "Resume",
+    "href": "/resume/Patrick_Zhou_resume_May_2026.pdf"
+  }
+}

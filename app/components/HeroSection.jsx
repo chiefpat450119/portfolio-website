@@ -4,6 +4,13 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import heroData from "@/content/data/hero.json";
+
+// Convert [{text, pause}] → flat TypeAnimation sequence array
+const sequence = heroData.typeAnimationSequences.flatMap(({ text, pause }) => [
+  text,
+  pause,
+]);
 
 const HeroSection = () => {
   return (
@@ -17,48 +24,33 @@ const HeroSection = () => {
           className="col-span-8 place-self-center sm:text-left justify-self-start"
         >
           <h1 className="text-[#f0edf8] mb-4 text-4xl sm:text-5xl lg:text-7xl lg:leading-tight font-heading font-extrabold tracking-tight">
-            Hi, I&apos;m Patrick
+            Hi, I&apos;m {heroData.name}
           </h1>
           <div className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-primary-500 mb-6 min-h-[1.5em]">
             <TypeAnimation
-              sequence={[
-                "game developer",
-                1200,
-                "sci-fi enthusiast",
-                1200,
-                "explorer of galaxies",
-                1200,
-                "tennis player",
-                1200,
-                "space colony builder",
-                1400,
-              ]}
+              sequence={sequence}
               wrapper="span"
               speed={55}
               repeat={Infinity}
             />
           </div>
           <p className="text-[#8b82a8] text-base lg:text-lg mb-8 max-w-xl leading-relaxed">
-            Fourth year computer science student at the University of British
-            Columbia with an intense passion for learning, creating, and
-            problem-solving. Whether it&apos;s at a hackathon, on the tennis
-            court, or in the depths of a sci-fi universe — I&apos;m always
-            building something.
+            {heroData.bio}
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
-              href="/#contact"
+              href={heroData.ctaPrimary.href}
               className="px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold transition-colors duration-150 rounded-sm"
             >
-              Contact Me
+              {heroData.ctaPrimary.label}
             </Link>
             <a
-              href="/resume/Patrick_Zhou_resume_May_2026.pdf"
+              href={heroData.ctaSecondary.href}
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 border border-primary-600 text-primary-400 hover:bg-primary-600 hover:text-white font-semibold transition-colors duration-150 rounded-sm"
             >
-              Resume
+              {heroData.ctaSecondary.label}
             </a>
           </div>
         </motion.div>

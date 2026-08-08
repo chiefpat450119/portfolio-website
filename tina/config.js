@@ -19,7 +19,151 @@ export default defineConfig({
 
   schema: {
     collections: [
-      // ── Projects ───────────────────────────────────────────────────────────
+      // ── Hero ───────────────────────────────────────────────────────────────
+      {
+        name: "hero",
+        label: "Hero Section",
+        path: "content/data",
+        format: "json",
+        match: { include: "hero" },
+        fields: [
+          {
+            type: "string",
+            name: "name",
+            label: "First Name",
+          },
+          {
+            type: "string",
+            name: "bio",
+            label: "Bio Paragraph",
+            ui: { component: "textarea" },
+          },
+          {
+            type: "object",
+            name: "typeAnimationSequences",
+            label: "Typing Animation Phrases",
+            list: true,
+            ui: {
+              itemProps: (item) => ({ label: item?.text ?? "Untitled" }),
+            },
+            fields: [
+              {
+                type: "string",
+                name: "text",
+                label: "Phrase",
+                isTitle: true,
+                required: true,
+              },
+              {
+                type: "number",
+                name: "pause",
+                label: "Pause after (ms)",
+              },
+            ],
+          },
+          {
+            type: "object",
+            name: "ctaPrimary",
+            label: "Primary Button",
+            fields: [
+              { type: "string", name: "label", label: "Label" },
+              { type: "string", name: "href", label: "URL" },
+            ],
+          },
+          {
+            type: "object",
+            name: "ctaSecondary",
+            label: "Secondary Button",
+            fields: [
+              { type: "string", name: "label", label: "Label" },
+              { type: "string", name: "href", label: "URL" },
+            ],
+          },
+        ],
+      },
+
+      // ── About ──────────────────────────────────────────────────────────────
+      {
+        name: "about",
+        label: "About Section",
+        path: "content/data",
+        format: "json",
+        match: { include: "about" },
+        fields: [
+          {
+            type: "object",
+            name: "bioSections",
+            label: "Bio Cards",
+            list: true,
+            ui: {
+              itemProps: (item) => ({ label: item?.heading ?? "Untitled" }),
+            },
+            fields: [
+              {
+                type: "string",
+                name: "heading",
+                label: "Heading",
+                isTitle: true,
+                required: true,
+              },
+              {
+                type: "string",
+                name: "text",
+                label: "Body Text",
+                ui: { component: "textarea" },
+              },
+            ],
+          },
+          {
+            type: "object",
+            name: "languages",
+            label: "Languages",
+            list: true,
+            ui: {
+              itemProps: (item) => ({ label: item?.name ?? "Untitled" }),
+            },
+            fields: [
+              {
+                type: "string",
+                name: "name",
+                label: "Name",
+                isTitle: true,
+                required: true,
+              },
+              {
+                type: "string",
+                name: "icon",
+                label: "Devicon Class (e.g. devicon-python-plain colored)",
+              },
+            ],
+          },
+          {
+            type: "object",
+            name: "tools",
+            label: "Tools & Frameworks",
+            list: true,
+            ui: {
+              itemProps: (item) => ({ label: item?.name ?? "Untitled" }),
+            },
+            fields: [
+              {
+                type: "string",
+                name: "name",
+                label: "Name",
+                isTitle: true,
+                required: true,
+              },
+              {
+                type: "string",
+                name: "icon",
+                label: "Devicon Class (e.g. devicon-react-original colored)",
+              },
+            ],
+          },
+        ],
+      },
+
+
       {
         name: "projects",
         label: "Projects",
