@@ -19,6 +19,55 @@ export default defineConfig({
 
   schema: {
     collections: [
+      // ── Game Embed ─────────────────────────────────────────────────────────
+      {
+        name: "gameEmbed",
+        label: "Game Embed",
+        path: "content/data",
+        format: "json",
+        match: { include: "gameEmbed" },
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Project Title",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "description",
+            label: "Description",
+            ui: { component: "textarea" },
+          },
+          {
+            type: "string",
+            name: "technologies",
+            label: "Technologies",
+            list: true,
+          },
+          {
+            type: "string",
+            name: "gitUrl",
+            label: "Source Code URL",
+          },
+          {
+            type: "string",
+            name: "previewUrl",
+            label: "Live Preview URL",
+          },
+          {
+            type: "string",
+            name: "embedSrc",
+            label: "Embed iframe URL (e.g., itch.io)",
+            required: true,
+          },
+          {
+            type: "image",
+            name: "thumbnail",
+            label: "Cover Image / Thumbnail",
+          },
+        ],
+      },
       // ── Hero ───────────────────────────────────────────────────────────────
       {
         name: "hero",

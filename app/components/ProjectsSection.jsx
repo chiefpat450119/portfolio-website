@@ -7,6 +7,7 @@ import ProjectCard from "./util/ProjectCard";
 import ProjectTag from "./util/ProjectTag";
 import { motion, useInView } from "framer-motion";
 import projectsJson from "@/content/data/projects.json";
+import gameEmbedData from "@/content/data/gameEmbed.json";
 
 const PROJECTS_DATA = projectsJson.projects;
 
@@ -77,8 +78,8 @@ const ProjectsSection = () => {
                 >
                   {/* Background Image */}
                   <Image
-                    src="/images/game/sandofsouls_thumbnail.png"
-                    alt="Sand of Souls Thumbnail"
+                    src={gameEmbedData.thumbnail}
+                    alt={`${gameEmbedData.title} Thumbnail`}
                     fill
                     className="object-cover transition-transform duration-500 group-hover/btn:scale-105"
                   />
@@ -99,10 +100,10 @@ const ProjectsSection = () => {
                 </button>
               ) : (
                 <iframe
-                  src="https://itch.io/embed-upload/18705654?color=333333"
+                  src={gameEmbedData.embedSrc}
                   frameBorder="0"
                   allowFullScreen
-                  title="Sand Of Souls on itch.io"
+                  title={`${gameEmbedData.title} on itch.io`}
                   className="w-full h-full"
                 />
               )}
@@ -116,33 +117,37 @@ const ProjectsSection = () => {
                     Latest Release — Play Now
                   </span>
                   <h5 className="font-semibold text-[#f0edf8] text-base leading-snug">
-                    Sand of Souls
+                    {gameEmbedData.title}
                   </h5>
                 </div>
                 <div className="flex gap-3">
-                  <Link
-                    href="https://github.com/chiefpat450119" 
-                    aria-label="View source code"
-                    className="border border-[#3d2b6b] hover:border-primary-400 p-2 transition-colors duration-150 bg-[#0d0a14]"
-                    target="_blank"
-                  >
-                    <CodeBracketIcon className="h-5 w-5 text-[#8b82a8] hover:text-primary-400 transition-colors duration-150" />
-                  </Link>
-                  <Link
-                    href="https://patrickzhou45.itch.io/sand-of-souls"
-                    aria-label="View live preview"
-                    className="border border-[#3d2b6b] hover:border-primary-400 p-2 transition-colors duration-150 bg-[#0d0a14]"
-                    target="_blank"
-                  >
-                    <EyeIcon className="h-5 w-5 text-[#8b82a8] hover:text-primary-400 transition-colors duration-150" />
-                  </Link>
+                  {gameEmbedData.gitUrl && (
+                    <Link
+                      href={gameEmbedData.gitUrl} 
+                      aria-label="View source code"
+                      className="border border-[#3d2b6b] hover:border-primary-400 p-2 transition-colors duration-150 bg-[#0d0a14]"
+                      target="_blank"
+                    >
+                      <CodeBracketIcon className="h-5 w-5 text-[#8b82a8] hover:text-primary-400 transition-colors duration-150" />
+                    </Link>
+                  )}
+                  {gameEmbedData.previewUrl && (
+                    <Link
+                      href={gameEmbedData.previewUrl}
+                      aria-label="View live preview"
+                      className="border border-[#3d2b6b] hover:border-primary-400 p-2 transition-colors duration-150 bg-[#0d0a14]"
+                      target="_blank"
+                    >
+                      <EyeIcon className="h-5 w-5 text-[#8b82a8] hover:text-primary-400 transition-colors duration-150" />
+                    </Link>
+                  )}
                 </div>
               </div>
               <p className="text-[#8b82a8] text-sm leading-relaxed flex-1 mt-2">
-                A brand new game created in Godot. Play it directly in the browser!
+                {gameEmbedData.description}
               </p>
               <div className="flex flex-wrap gap-2 mt-4">
-                {["Godot", "C#"].map((tech, index) => (
+                {gameEmbedData.technologies?.map((tech, index) => (
                   <span
                     key={index}
                     className="text-[#f0edf8] text-xs px-2 py-0.5 bg-[#3d2b6b] border border-[#6d28d9]"

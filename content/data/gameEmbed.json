@@ -1,0 +1,9 @@
+{
+  "title": "Sand of Souls",
+  "description": "A brand new game created in Godot. Play it directly in the browser!",
+  "technologies": ["Godot", "C#"],
+  "gitUrl": "https://github.com/chiefpat450119",
+  "previewUrl": "https://patrickzhou45.itch.io/sand-of-souls",
+  "embedSrc": "https://itch.io/embed-upload/18705654?color=333333",
+  "thumbnail": "/images/game/sandofsouls_thumbnail.png"
+}
