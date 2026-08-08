@@ -15,18 +15,15 @@ const achievementsList = [
     metric: "Projects",
     value: "10",
     postfix: "+",
-    icon: "🎮",
   },
   {
     metric: "Hackathons",
     value: "6",
-    icon: "⚡",
   },
   {
     metric: "Years Experience",
     value: "4",
     postfix: "+",
-    icon: "🚀",
   },
 ];
 
@@ -41,16 +38,13 @@ const AchievementsSection = () => {
             className="flex flex-col items-center justify-center"
           >
             <div className="flex items-center gap-2">
-              <span className="text-2xl" aria-hidden="true">
-                {achievement.icon}
-              </span>
-              <h2 className="text-slate-200 text-4xl font-bold font-heading flex flex-row items-baseline">
+              <h2 className="text-slate-200 text-4xl font-bold font-sans flex flex-row items-baseline">
                 {achievement.prefix}
                 <AnimatedNumbers
                   includeComma
                   animateToNumber={parseInt(achievement.value)}
                   locale="en-US"
-                  className="text-slate-200 text-4xl font-bold"
+                  className="text-slate-200 text-4xl font-bold font-sans"
                   configs={(_, index) => {
                     return {
                       mass: 1,
