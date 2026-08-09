@@ -4,14 +4,18 @@ import { motion, useInView } from "framer-motion";
 import aboutData from "@/content/data/about.json";
 
 // ── Sub-components ────────────────────────────────────────────────────────────
-const BioCard = ({ heading, text, delay, isInView }) => (
+const BioCard = ({ heading, bullets, delay, isInView }) => (
   <motion.div
     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
     transition={{ duration: 0.55, delay }}
     className="bg-gray-900 border border-blue-900 border-l-[3px] border-l-primary-500 p-5 flex flex-col gap-2"
   >
     <h3 className="text-slate-200 font-semibold text-base">{heading}</h3>
-    <p className="text-slate-400 text-sm leading-relaxed">{text}</p>
+    <ul className="text-slate-400 text-sm leading-relaxed list-disc list-inside space-y-1">
+      {bullets && bullets.map((bullet, i) => (
+        <li key={i}>{bullet}</li>
+      ))}
+    </ul>
   </motion.div>
 );
 
@@ -66,7 +70,7 @@ const AboutSection = () => {
           <BioCard
             key={section.heading}
             heading={section.heading}
-            text={section.text}
+            bullets={section.bullets}
             delay={i * 0.12}
             isInView={isBioInView}
           />

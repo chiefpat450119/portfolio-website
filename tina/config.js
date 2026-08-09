@@ -157,9 +157,9 @@ export default defineConfig({
               },
               {
                 type: "string",
-                name: "text",
-                label: "Body Text",
-                ui: { component: "textarea" },
+                name: "bullets",
+                label: "Bullet Points",
+                list: true,
               },
             ],
           },
