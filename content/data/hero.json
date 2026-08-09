@@ -1,0 +1,30 @@
+{
+  "name": "Patrick",
+  "bio": "Fourth year computer science student at the University of British Columbia with an intense passion for leadership, problem-solving, and building exciting things from games to MCPs.",
+  "typeAnimationSequences": [
+    {
+      "text": "full-stack developer",
+      "pause": 1200
+    },
+    {
+      "text": "game designer",
+      "pause": 1200
+    },
+    {
+      "text": "scripter",
+      "pause": 1200
+    },
+    {
+      "text": "sci-fi enthusiast",
+      "pause": 1200
+    }
+  ],
+  "ctaPrimary": {
+    "label": "Contact Me",
+    "href": "/#contact"
+  },
+  "ctaSecondary": {
+    "label": "Resume",
+    "href": "/resume/Patrick_Zhou_resume_May_2026.pdf"
+  }
+}

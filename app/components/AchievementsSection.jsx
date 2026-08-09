@@ -3,64 +3,22 @@ import React from "react";
 import dynamic from "next/dynamic";
 import GitHubCalendar from "react-github-calendar";
 
-const AnimatedNumbers = dynamic(
-  () => {
-    return import("react-animated-numbers");
-  },
-  { ssr: false }
-);
-
-const achievementsList = [
-  {
-    metric: "Projects",
-    value: "10",
-    postfix: "+",
-  },
-  {
-    metric: "Hackathons",
-    value: "6",
-  },
-  {
-    metric: "Years of Experience",
-    value: "4",
-    postfix: "+",
-  },
-];
-
 const AchievementsSection = () => {
   return (
     <div className="py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-      <div className="sm:border-secondary-400 sm:border rounded-md py-6 px-16 mx-12 flex flex-col sm:flex-row items-center justify-between">
-        {achievementsList.map((achievement, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
-          >
-            <h2 className="text-white text-4xl font-bold flex flex-row">
-              {achievement.prefix}
-              <AnimatedNumbers
-                includeComma
-                animateToNumber={parseInt(achievement.value)}
-                locale="en-US"
-                className="text-white text-4xl font-bold"
-                configs={(_, index) => {
-                  return {
-                    mass: 1,
-                    friction: 100,
-                    tensions: 140 * (index + 1),
-                  };
-                }}
-              />
-              {achievement.postfix}
-            </h2>
-            <p className="text-[#ADB7BE] text-base">{achievement.metric}</p>
-          </div>
-        ))}
+      {/* GitHub calendar */}
+      <div className="bg-gray-900 border border-blue-900 flex flex-col gap-3 justify-center items-center px-6 md:mx-12 py-6 md:py-8">
+        <p className="font-heading text-base tracking-widest text-slate-400 uppercase">
+          Activity Log
+        </p>
+        <GitHubCalendar
+          username="chiefpat450119"
+          colorScheme="dark"
+          theme={{
+            dark: ["#0f172a", "#1e3a8a", "#1e40af", "#3b82f6", "#60a5fa"],
+          }}
+        />
       </div>
-      <div className="rounded-xl flex justify-center items-center px-8 mt-4 md:mx-12 md:mt-8 py-4 md:py-8 sm:border sm:border-primary-500">
-        <GitHubCalendar username="chiefpat450119" colorScheme="dark" />
-      </div>
-
     </div>
   );
 };

@@ -1,0 +1,13 @@
+{
+  "title": "Sand of Souls",
+  "description": "A topdown survivor shooter, where your health and ammo are represented by a draining hourglass. Top 1% for GMTK Game Jam 2026 with the theme \"Countdown\".",
+  "technologies": [
+    "Godot",
+    "GDScript",
+    "GLSL"
+  ],
+  "gitUrl": "https://github.com/chiefpat450119/SandOfSouls",
+  "previewUrl": "https://patrickzhou45.itch.io/sand-of-souls",
+  "embedSrc": "https://itch.io/embed-upload/18705654?color=333333",
+  "thumbnail": "/images/game/sandofsouls_thumbnail.png"
+}
