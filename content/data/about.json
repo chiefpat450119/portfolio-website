@@ -3,51 +3,56 @@
     {
       "heading": "I am currently...",
       "bullets": [
-        "4th year CS student at UBC.",
-        "Currently interning at Shopify in Toronto.",
-        "Active game developer at UBC Game Dev Club, where I lead design and programming on Project Starhaven — a narrative-driven isometric space colony builder."
+        "4th year CS student @ UBC",
+        "SWE Intern @ Shopify",
+        "Team Lead @ UBC Game Dev Club"
       ]
     },
     {
       "heading": "I have experience in...",
       "bullets": [
-        "My main obsession is game development — primarily in Godot and Unity, building narrative-driven games at the intersection of sci-fi world-building and systems design.",
-        "I also love scripting and automation: if it can be automated, it will be."
+        "Game development in Godot and Unity",
+        "Full-stack web development",
+        "Python scripting and automation"
       ]
     },
     {
       "heading": "I am interested in...",
       "bullets": [
-        "Competitive tennis player and co-founder of CanDo Tennis.",
-        "Avid sci-fi reader — Asimov, Liu Cixin, Vernor Vinge.",
-        "I follow space exploration news obsessively and hit the gym most days."
+        "Watching and playing tennis",
+        "Sci-fi and space exploration",
+        "Open world story games e.g. The Witcher 3"
       ]
     }
   ],
   "languages": [
     {
-      "name": "Python",
-      "icon": "devicon-python-plain colored"
+      "name": "C#",
+      "icon": "devicon-csharp-plain colored"
     },
     {
-      "name": "Kotlin",
-      "icon": "devicon-kotlin-plain colored"
+      "name": "Ruby",
+      "icon": "devicon-ruby-plain colored"
     },
     {
       "name": "JavaScript",
       "icon": "devicon-javascript-plain colored"
     },
     {
-      "name": "C#",
-      "icon": "devicon-csharp-plain colored"
+      "name": "Python",
+      "icon": "devicon-python-plain colored"
+    },
+    {
+      "name": "GDScript",
+      "icon": "devicon-godot-plain colored"
+    },
+    {
+      "name": "Kotlin",
+      "icon": "devicon-kotlin-plain colored"
     },
     {
       "name": "Java",
       "icon": "devicon-java-plain colored"
-    },
-    {
-      "name": "R",
-      "icon": "devicon-r-plain colored"
     }
   ],
   "tools": [
@@ -68,12 +73,16 @@
       "icon": "devicon-nextjs-plain"
     },
     {
-      "name": "GitHub",
-      "icon": "devicon-github-original"
+      "name": "MySQL",
+      "icon": "devicon-mysql-original colored"
     },
     {
       "name": "Tailwind",
       "icon": "devicon-tailwindcss-plain colored"
+    },
+    {
+      "name": "GraphQL",
+      "icon": "devicon-graphql-plain colored"
     }
   ]
 }

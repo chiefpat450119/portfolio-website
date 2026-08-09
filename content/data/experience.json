@@ -5,33 +5,41 @@
       "role": "Software Engineer Intern",
       "company": "Shopify",
       "location": "Toronto, ON",
-      "period": "May 2025 – Aug 2025",
+      "period": "May 2026 - Aug 2026",
       "bullets": [
         "Worked on internal tooling and developer experience improvements.",
         "Collaborated with cross-functional teams in a large-scale Ruby on Rails and React environment."
       ],
-      "technologies": ["Ruby on Rails", "React", "Kotlin", "GraphQL"]
+      "technologies": [
+        "Ruby on Rails",
+        "React",
+        "NodeJS",
+        "GraphQL"
+      ]
     },
     {
       "id": 1,
       "role": "Software Engineer Intern",
       "company": "Rivian and VW Group Technologies",
       "location": "Vancouver, BC",
-      "period": "Summer 2024",
+      "period": "Jan 2025 - Aug 2025",
       "bullets": [
-        "Developed features for internal software systems supporting automotive software platforms.",
-        "Worked across full-stack environments in an agile team setting."
+        "Worked as a full-stack Android developer on the Infotainment Media App, completing 3 major features, fixing 20+ bugs, and integrating 30+ 3rd-party APKs."
       ],
-      "technologies": ["Python", "TypeScript", "React", "REST APIs"]
+      "technologies": [
+        "Kotlin",
+        "Android",
+        "JetpackCompose"
+      ]
     },
     {
       "id": 2,
       "role": "Tennis Instructor",
       "company": "UBC Recreation",
       "location": "Vancouver, BC",
-      "period": "2023 – Present",
+      "period": "Mar 2023 - Dec 2023",
       "bullets": [
-        "Coach recreational and competitive players of all skill levels.",
+        "Coached junior players using a game-based, long-term approach.",
         "Co-founded CanDo Tennis, a freelance tennis coaching platform."
       ],
       "technologies": []
