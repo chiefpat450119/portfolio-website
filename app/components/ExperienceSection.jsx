@@ -163,7 +163,7 @@ const ExperienceCard = ({ item }) => (
             {item.bullets.map((bullet, i) => (
               <li key={i} className="text-slate-400 text-sm flex gap-2 leading-snug">
                 <span className="text-primary-600 flex-shrink-0 mt-0.5">—</span>
-                <span>{bullet}</span>
+                <span>{bullet.text}</span>
               </li>
             ))}
           </ul>
