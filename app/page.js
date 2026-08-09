@@ -11,7 +11,7 @@ import StarfieldBackground from "./components/StarfieldBackground";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-[#0d0a14] relative">
-      <StarfieldBackground />
+      {/* <StarfieldBackground /> */}
       <Navbar />
       <div className="container mt-24 mx-auto px-6 py-4 relative z-10">
         <HeroSection />
