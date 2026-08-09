@@ -7,8 +7,15 @@
       "location": "Toronto, ON",
       "period": "May 2026 - Aug 2026",
       "bullets": [
-        { "text": "Spearheaded development of a new IDE extension version pinning system using Fleet GitOps, triggered by a " },
-        { "text": "Collaborated with cross-functional teams in a large-scale Ruby on Rails and React environment." }
+        {
+          "text": "Spearheaded development of a new IDE extension version pinning system using Fleet GitOps with a Rails backend and MySQL database as a source of truth, preventing supply-chain attacks on employee machines company-wide."
+        },
+        {
+          "text": "Drove development of fine-grained, resource-scoped, autonomous agent-enabled MCP tools for first-party Shopify services with 5000+ users."
+        },
+        {
+          "text": "Collaborated with key stakeholders of first-party services to coordinate authentication, attribution, and least-privilege access for MCP tools."
+        }
       ],
       "technologies": [
         "Ruby on Rails",
@@ -24,7 +31,9 @@
       "location": "Vancouver, BC",
       "period": "Jan 2025 - Aug 2025",
       "bullets": [
-        { "text": "Worked as a full-stack Android developer on the Infotainment Media App, completing 3 major features, fixing 20+ bugs, and integrating 30+ 3rd-party APKs." }
+        {
+          "text": "Worked as a full-stack Android developer on the Infotainment Media App, completing 3 major features, fixing 20+ bugs, and integrating 30+ 3rd-party APKs."
+        }
       ],
       "technologies": [
         "Kotlin",
@@ -39,8 +48,12 @@
       "location": "Vancouver, BC",
       "period": "Mar 2023 - Dec 2023",
       "bullets": [
-        { "text": "Coached junior players using a game-based, long-term approach." },
-        { "text": "Co-founded CanDo Tennis, a freelance tennis coaching platform." }
+        {
+          "text": "Coached junior players using a game-based, long-term approach."
+        },
+        {
+          "text": "Co-founded CanDo Tennis, a freelance tennis coaching platform."
+        }
       ],
       "technologies": []
     }
