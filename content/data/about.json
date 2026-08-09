@@ -3,25 +3,24 @@
     {
       "heading": "I am currently...",
       "bullets": [
-        "4th year CS student @ UBC",
-        "SWE Intern @ Shopify",
-        "Team Lead @ UBC Game Dev Club"
+        { "text": "4th year CS student at UBC." },
+        { "text": "Currently interning at Shopify in Toronto." },
+        { "text": "Active game developer at UBC Game Dev Club, where I lead design and programming on Project Starhaven — a narrative-driven isometric space colony builder." }
       ]
     },
     {
       "heading": "I have experience in...",
       "bullets": [
-        "Game development in Godot and Unity",
-        "Full-stack web development",
-        "Python scripting and automation"
+        { "text": "My main obsession is game development — primarily in Godot and Unity, building narrative-driven games at the intersection of sci-fi world-building and systems design." },
+        { "text": "I also love scripting and automation: if it can be automated, it will be." }
       ]
     },
     {
       "heading": "I am interested in...",
       "bullets": [
-        "Watching and playing tennis",
-        "Sci-fi and space exploration",
-        "Open world story games e.g. The Witcher 3"
+        { "text": "Competitive tennis player and co-founder of CanDo Tennis." },
+        { "text": "Avid sci-fi reader — Asimov, Liu Cixin, Vernor Vinge." },
+        { "text": "I follow space exploration news obsessively and hit the gym most days." }
       ]
     }
   ],

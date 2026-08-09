@@ -156,10 +156,21 @@ export default defineConfig({
                 required: true,
               },
               {
-                type: "string",
+                type: "object",
                 name: "bullets",
                 label: "Bullet Points",
                 list: true,
+                ui: {
+                  itemProps: (item) => ({ label: item?.text ? item.text.substring(0, 40) + '...' : "New Bullet" }),
+                },
+                fields: [
+                  {
+                    type: "string",
+                    name: "text",
+                    label: "Text",
+                    ui: { component: "textarea" },
+                  },
+                ],
               },
             ],
           },
@@ -328,10 +339,21 @@ export default defineConfig({
                 label: "Period (e.g. May 2025 – Aug 2025)",
               },
               {
-                type: "string",
+                type: "object",
                 name: "bullets",
                 label: "Bullet Points",
                 list: true,
+                ui: {
+                  itemProps: (item) => ({ label: item?.text ? item.text.substring(0, 40) + '...' : "New Bullet" }),
+                },
+                fields: [
+                  {
+                    type: "string",
+                    name: "text",
+                    label: "Text",
+                    ui: { component: "textarea" },
+                  },
+                ],
               },
               {
                 type: "string",

@@ -13,7 +13,7 @@ const BioCard = ({ heading, bullets, delay, isInView }) => (
     <h3 className="text-slate-200 font-semibold text-base">{heading}</h3>
     <ul className="text-slate-400 text-sm leading-relaxed list-disc list-inside space-y-1">
       {bullets && bullets.map((bullet, i) => (
-        <li key={i}>{bullet}</li>
+        <li key={i}>{bullet.text}</li>
       ))}
     </ul>
   </motion.div>
